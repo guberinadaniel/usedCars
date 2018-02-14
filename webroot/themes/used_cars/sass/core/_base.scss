@@ -1,0 +1,53 @@
+// ========================================
+//
+// @file _base.scss
+// Base level tags and styles
+//
+// ========================================
+
+
+//input[type="text"],
+//input[type="button"],
+//input[type="submit"],
+//input[type="email"],
+//input[type="password"] {
+//  font-size: 16px;
+//}
+
+
+
+::selection {
+  background: lighten($color-black, 10%);
+  color: $color-white;
+}
+
+::-moz-selection {
+  background: lighten($color-black, 10%);
+  color: $color-white;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  //line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background: $body;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  transition: 0.4s;
+}

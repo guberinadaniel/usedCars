@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: welcome_to_auto_cars_homepage
+label: 'Welcome to Auto Cars homepage'
+revision: 0
+description: ''

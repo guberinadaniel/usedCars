@@ -1,0 +1,14 @@
+<h5>Photo stream</h5>
+<div class="images-wraper">
+{% for entry in content %}
+    <div class="image-blog-side">
+        <a href="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+    </div>
+{% endfor %}
+</div>
+<h5>Tags</h5>
+<div class="blog-tags-wraper">
+{% for tags in content %}
+    <div class="blog-tags"><a href="{{ tags.tx_url }}">{{ tags.tag }}</a></div>
+{% endfor %}
+</div>

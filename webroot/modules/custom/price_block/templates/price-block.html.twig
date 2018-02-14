@@ -1,0 +1,17 @@
+{% for entry in content %}
+        <h5>Price</h5>
+    <h1>${{ entry.price|number_format(2, '.', ',') }}</h1>
+    <p class="price-date">{{ entry.changed|date('M d, Y') }}</p>
+    <p class="price-place">{{ entry.city }}, {{ entry.country }}</p>
+    <button class="block-phone"><i class="fa fa-phone"></i>
+        {{ entry.phone }}
+        {% if not entry.phone %}
+            <span>555 456 46679</span>
+        {% endif %}
+    </button>
+    <button class="block-button send">SEND A MESSAGE</button>
+    <button class="block-button print">PRINT THIS AD</button>
+    <button class="block-button save">SAVE THIS AD</button>
+    <button class="block-button report">REPORT ABUSE</button>
+{% endfor %}
+

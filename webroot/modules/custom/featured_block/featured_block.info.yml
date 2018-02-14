@@ -1,0 +1,5 @@
+name: Featured Block
+type: module
+description: Featured Block
+core: 8.x
+package: Custom

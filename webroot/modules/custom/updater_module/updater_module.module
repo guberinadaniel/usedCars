@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains updater_module.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function updater_module_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the updater_module module.
+    case 'help.page.updater_module':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for hook update') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function updater_module_theme() {
+  return [
+    'updater_module' => [
+      'render element' => 'children',
+    ],
+  ];
+}

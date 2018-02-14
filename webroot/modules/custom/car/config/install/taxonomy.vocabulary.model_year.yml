@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Model year'
+vid: model_year
+description: 'Year of production'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains contact_us.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function contact_us_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the contact_us module.
+    case 'help.page.contact_us':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function contact_us_theme() {
+  return [
+    'contact_us' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,0 +1,166 @@
+@media (max-width:$screen-md) {
+  .region-header {
+    .layout-wraper {
+      #block-headerphonenumberandaddress {
+        display: inline-block;
+        width: 49%;
+        .field--name-field-phone-number {
+          display: block !important;
+          padding: 8px 15px;
+          a {
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+              color: #5dc302;
+            }
+            &::before {
+              content: '\f095';
+              font-family: FontAwesome;
+              padding-right: 8px;
+            }
+          }
+
+        }
+        .field--name-field-address {
+          display: block !important;
+          color: #fff;
+          padding: 8px 15px;
+          &:hover {
+            color: #5dc302;
+            cursor: pointer;
+          }
+          &::before {
+            content: '\f041';
+            font-family: FontAwesome;
+            padding-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:$screen-sm) {
+  .region-header {
+    .layout-wraper {
+      #block-headerphonenumberandaddress {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        .field--name-field-phone-number {
+          display: inline-block !important;
+          padding: 8px 15px;
+          a {
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+              color: #5dc302;
+            }
+            &::before {
+              content: '\f095';
+              font-family: FontAwesome;
+              padding-right: 8px;
+            }
+          }
+
+        }
+        .field--name-field-address {
+          display: inline-block !important;
+          color: #fff;
+          padding: 8px 15px;
+          &:hover {
+            color: #5dc302;
+            cursor: pointer;
+          }
+          &::before {
+            content: '\f041';
+            font-family: FontAwesome;
+            padding-right: 8px;
+          }
+        }
+      }
+      #block-used-cars-account-menu {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        .menu-item {
+          text-align: center !important;
+          padding:0 15px;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: #5dc302;
+          }
+        }
+      }
+    }
+  }
+}
+
+    // Default desktop style
+.region-header {
+  background: #3a444e ;
+  padding: 8px 0;
+  .layout-wraper {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    #block-headerphonenumberandaddress {
+      display: inline-block;
+      width: 49%;
+      .field--name-field-phone-number {
+        display: inline-block;
+        padding:7px 0 7px 15px;
+        a {
+          text-decoration: none;
+          color: #fff;
+          &:hover {
+            color: #5dc302;
+          }
+          &::before {
+            content: '\f095';
+            font-family: FontAwesome;
+            padding-right: 5px;
+          }
+        }
+
+      }
+      .field--name-field-address {
+        display: inline-block;
+        color: #fff;
+        padding:7px 0 7px 14px;
+        &:hover {
+          color: #5dc302;
+          cursor: pointer;
+        }
+        &::before {
+          content: '\f041';
+          font-family: FontAwesome;
+          padding-right: 5px;
+        }
+      }
+    }
+    #block-used-cars-account-menu {
+      display: inline-block;
+      width: 49%;
+      .menu {
+        text-align: right;
+        margin-top: 0;
+        .menu-item {
+          text-align: right;
+          padding: 0 15px;
+          display: inline-block;
+          margin-left: -4px;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: #5dc302;
+          }
+        }
+      }
+    }
+  }
+}

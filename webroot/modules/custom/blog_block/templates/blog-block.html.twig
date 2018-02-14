@@ -1,0 +1,16 @@
+{% for entry in content %}
+    <div class="blog-block-wraper">
+        <div class="image-zoom">
+            <img src="{{ entry.image }}"/>
+        </div>
+        <a href="{{ entry.nid }}"><h4>{{ entry.title }}</h4></a>
+        <div class="p-wraper">
+            <p>By : <span class="name">{{ entry.name }}</span></p>
+            <p>Category : <a href="{{ entry.tx_url }}">{{ entry.category }}</a></p>
+        </div>
+        <div class="date-field">{{ entry.created|date('d M Y') }}</div>
+        <p>{{ entry.blog_text }}</p>
+        <a href="{{ entry.nid }}">Read More</a>
+    </div>
+{% endfor %}
+

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains blog_side.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function blog_side_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the blog_side module.
+    case 'help.page.blog_side':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function blog_side_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'blog_side' => array(
+            'template'  => 'blog-side',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+    ];
+}

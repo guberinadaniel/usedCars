@@ -1,0 +1,13 @@
+name: Car
+description: 'Provides Car content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - file
+  - image
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - user

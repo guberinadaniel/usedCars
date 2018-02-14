@@ -1,0 +1,21 @@
+diff --git a/config/install/node_clone.settings.yml b/config/install/node_clone.settings.yml
+index 02daf03..1b8f6e9 100644
+--- a/config/install/node_clone.settings.yml
++++ b/config/install/node_clone.settings.yml
+@@ -2,3 +2,4 @@ node_clone_method: prepopulate
+ node_clone_nodes_without_confirm: false
+ node_clone_use_node_type_name: 0
+ node_clone_menu_links: false
++node_clone_omitted: {  }
+diff --git a/config/schema/node_clone.schema.yml b/config/schema/node_clone.schema.yml
+index 37c851d..bfeb5f7 100644
+--- a/config/schema/node_clone.schema.yml
++++ b/config/schema/node_clone.schema.yml
+@@ -10,3 +10,7 @@ node_clone.settings:
+       type: integer
+     node_clone_menu_links:
+       type: boolean
++    node_clone_omitted:
++      type: sequence
++      sequence:
++        type: string

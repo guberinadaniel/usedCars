@@ -1,0 +1,1890 @@
+@media (max-width:$screen-md) {
+  #car-search {
+    padding: 50px 0;
+    .filter-sort-by {
+      display: block;
+    }
+    .form-side-content-wraper {
+      display: block;
+      .form-side {
+        display: inline-block;
+        width: 41.66666667%!important;
+        margin-left: -4px;
+        margin-bottom: 30px;
+        vertical-align: top;
+        padding: 0 15px;
+        .form-display {
+          padding: 25px;
+          background: #2f3b3e;
+          .filter-car-name {
+            position: relative;
+            margin-bottom: 30px;
+            .js-form-item {
+              margin: 0;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              input {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 100%;
+              }
+            }
+            #edit-submit--2 {
+              position: absolute;
+              right: 0;
+              border: 0;
+              border-radius: 0 3px 3px 0;
+              height: 40px;
+              background: #5dc302;
+              padding: 11px 12px;
+              color: #fff;
+              margin: 0;
+              top: 41px;
+            }
+          }
+
+          .filter-price-range,
+          .filter-car-city,
+          .filter-reg-city,
+          .filter-transmission,
+          .filter-fuel-type {         //TODO REMEMBER custom checkbox styling with css
+            margin-bottom: 30px;
+            legend {
+              font-size: 18px;
+              font-weight: 600;
+              font-family: "Raleway";
+              font-style: normal;
+              color: #5dc302;
+              margin-bottom: 20px;
+            }
+            .fieldset-wrapper {
+              .form-type-checkbox {
+                margin-top: 0;
+                margin-bottom: 4px;
+                padding: 5px 0;
+                position: relative;
+                input{
+                  opacity: 0;
+                }
+                input[type="checkbox"] + label {
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    height: 20px;
+                    //display: block;
+                    z-index: 999;
+                    top:5px;
+                  }
+
+                }
+                input[type="checkbox"]:checked + label {
+                  &:before {
+                    content: '\f00c';
+                    font-family: 'FontAwesome';
+                    color: #fff;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    z-index: 999;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    padding-left: 2px;
+                  }
+                }
+                label {
+                  color: #fff;
+                  .price-value,.city-name,.reg-city-name,.transmission-name,.fuel-type-name {         //TODO VALUE
+                    display: inline-block;
+                    width: 80%;
+                    text-align: left;
+                    padding-left: 5px;
+                  }
+                  .price-count,.city-count,.reg-city-count,.transmission-count,.fuel-type-count {        //TODO COUNT
+                    display: inline-block;
+                    width: 5%;
+                    text-align: right;
+                  }
+
+                }
+              }
+            }
+          }
+          .filter-car-from {
+            margin-bottom: 30px;
+            .js-form-item {
+              display: inline-block;
+              width: 50%;
+              margin-left: -4px;
+              padding-left: 5px;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              select {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 89%;
+              }
+            }
+            .form-no-label {
+              display: inline-block;
+              width: 50%;
+              margin-left: -4px;
+              padding-left: 15px;
+              select {
+                width: 100%;
+              }
+            }
+          }
+          .filter-car-type, .filter-car-brand {
+            margin-bottom: 30px;
+            .js-form-item {
+              display: block;
+              width: 100%;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              select {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 100%;
+              }
+            }
+          }
+          .update-results {
+            position: relative;
+            input {
+              background: #5dc302;
+              display: block;
+              border-radius: 0;
+              width: 100%;
+              color: #fff;
+              text-transform: uppercase;
+              font-weight: 700;
+              padding: 10px 15px;
+              border: 0;
+            }
+            &::before {
+              position: absolute;
+              content: "\f002";
+              font-family: FontAwesome;
+              color: #fff;
+              font-size: 16px;
+              z-index: 500;
+              top: 9px;
+              left: 27px;
+            }
+          }
+        }
+      }
+      .search-results-content {
+        display: inline-block;
+        width: 58.33333333% !important;
+        margin-left: -4px;
+        vertical-align: top;
+        padding: 0 15px;
+        .related-ads {
+          display: block;
+          padding: 20px;
+          background: #fff;
+          border: 1px solid #eee;
+          margin-bottom: 15px;
+          .block-content {
+            margin: 0 auto;
+            .search-image-wraper {
+              width: 22%;
+              display: inline-block;
+              img {
+              }
+            }
+            .car-info-wraper {
+              padding-left: 20px;
+              display: inline-block;
+              vertical-align: top;
+              width: 50%;
+              h4 {
+                margin-top: 0;
+                font-family: "Raleway";
+                font-style: normal;
+                font-weight: 600;
+                color: #555;
+                font-size: 18px;
+                vertical-align: baseline;
+                margin-bottom: 8px;
+              }
+              .year-millage-city{
+                vertical-align: bottom;
+                .model-year{
+                  display: block !important;
+                  margin-right: 20px;
+                  font-size: 16px !important;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f073';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .millage {
+                  margin-top: 10px !important;
+                  font-size: 16px !important;
+                  display: inline-block !important;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f0e4';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .km {
+                  font-size: 16px !important;
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+                .city {
+                  margin-top: 10px !important;
+                  font-size: 16px !important;
+                  display: block;
+                  margin-right: 20px;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f041';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+              }
+              .fuel-cc-transm {
+                padding: 12px 0;
+                color: #555;
+                font-size: 12px;
+                .fuel-type,
+                .ccm,
+                .transmission {
+                  &::after {
+                    content:'|';
+                    color: #c9cbcd;
+                    margin: 0 10px;
+                  }
+                }
+              }
+              .updated {
+                color: #555;
+                font-size: 12px;
+              }
+            }
+            .price-details {
+              text-align: right;
+              display: inline-block;
+              vertical-align: top;
+              width: 21%;
+              float: none !important;
+              h3 {
+                margin: 0;
+                font-size: 20px !important;
+              }
+              a {
+                margin-top:20px ;
+                text-decoration: none;
+                background: #5dc302;
+                display: inline-block;
+                border-radius: 5px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 8px 15px;
+                text-align: center;
+                &::after {
+                  content: '\f0a9';
+                  font-family: FontAwesome;
+                  color: #fff;
+                  margin-left: 6px;
+                  font-weight: 300;
+                }
+                &:hover {
+                  background: #333;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+          &:hover {
+            border: 1px solid #5dc302;
+          }
+        }
+      }
+      .search-results-content.search-grid {
+        display: inline-block;
+        width: 75%;
+        margin-left: -4px;
+        vertical-align: top;
+        padding: 0 15px;
+        .related-ads-wraper {
+          padding: 0 15px 15px 15px;
+          width: 50% !important;
+          margin-left: -4px;
+          display: inline-block;
+          vertical-align: top;
+          .related-ads {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+            .block-content {
+              margin: 0 auto;
+              img {
+                display: block;
+                width: 100%;
+              }
+              .car-info-wraper {
+                margin-top: 10px;
+                padding-left: 0;
+                display: block;
+                vertical-align: top;
+                width: 100%;
+                h4 {
+                  margin-top: 0;
+                  font-family: "Raleway";
+                  font-style: normal;
+                  font-weight: 600;
+                  color: #555;
+                  font-size: 18px;
+                  vertical-align: baseline;
+                  margin-bottom: 8px;
+                }
+                .year-millage-city {
+                  vertical-align: bottom;
+                  .model-year {
+                    display: none !important;
+                    margin-right: 20px;
+                    font-size: 16px;
+                    &::before {
+                      font-size: 16px;
+                      content: '\f073';
+                      font-family: FontAwesome;
+                      padding-right: 8px;
+                      color: #5dc302;
+                    }
+                  }
+                  .millage {
+                    margin-top: 10px ;
+                    font-size: 14px !important;
+                    display: inline-block ;
+                    margin-left: -4px;
+                    &::before {
+                      font-size: 14px !important;
+                      content: '\f0e4';
+                      font-family: FontAwesome;
+                      padding-right: 8px;
+                      color: #5dc302;
+                    }
+                  }
+                  .km {
+                    font-size: 14px !important;
+                    display: inline-block;
+                    margin-right: 10px;
+                  }
+                  .city {
+                    margin-top: 10px ;
+                    font-size: 14px !important;
+                    display: inline-block ;
+                    margin-right: 20px;
+                    margin-left: -4px;
+                    &::before {
+                      font-size: 14px !important;
+                      content: '\f041';
+                      font-family: FontAwesome;
+                      padding-right: 8px;
+                      color: #5dc302;
+                    }
+                  }
+                }
+                .fuel-cc-transm {
+                  padding: 12px 0;
+                  color: #555;
+                  font-size: 12px;
+                  .fuel-type,
+                  .ccm,
+                  .transmission {
+                    &::after {
+                      content: '|';
+                      color: #c9cbcd;
+                      margin: 0 2px;
+                    }
+                  }
+                }
+                .updated {
+                  color: #555;
+                  font-size: 12px;
+                }
+              }
+              .price-details {
+                text-align: left;
+                display: block;
+                vertical-align: top;
+                width: 100%;
+                float: none;
+                h3 {
+                  margin-top: 10px;
+                  font-size: 24px !important;
+                  font-family: "Open Sans";
+                  font-style: normal;
+                  font-weight: 700;
+                }
+                a {
+                  width: 100%;
+                  margin-top: 10px;
+                  text-decoration: none;
+                  background: #5dc302;
+                  display: inline-block;
+                  border-radius: 5px;
+                  color: #fff;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  padding: 8px 20px;
+                  text-align: center;
+                  font-size: 14px;
+                  &::after {
+                    content: '\f0a9';
+                    font-family: FontAwesome;
+                    color: #fff;
+                    margin-left: 6px;
+                    font-weight: 300;
+                  }
+                  &:hover {
+                    background: #333;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+            &:hover {
+              border: 1px solid #5dc302;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:$screen-sm) {
+  #car-search {
+    padding: 50px 0;
+    .filter-sort-by-wraper {
+      padding: 0 15px;
+      margin-left: -4px ;
+      margin-right: 4px;
+      margin-bottom: 30px;
+      .filter-sort-by {
+        display: block;
+        padding: 15px;
+        background: #dde5ea;
+        .list-grid-wraper {
+          display: block !important;
+          margin-left: 0 !important;
+          width: 100%!important;
+          padding: 10px 15px!important;
+          .list-button {
+            border: 0;
+            background: 0;
+            padding: 0;
+            i {
+              &::before {
+                font-size: 20px;
+                font: normal normal normal 20px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+              }
+            }
+          }
+          .grid-button {
+            border: 0;
+            background: 0;
+            i {
+              &::before {
+                font-size: 20px;
+                font: normal normal normal 20px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+              }
+            }
+          }
+        }
+        .js-form-item-sort-by {
+          display: block !important;
+          margin-left: 0 !important;
+          width: 100% !important;
+          padding: 15px 0 !important;
+          margin-top: 0;
+          margin-bottom: 0;
+          label {
+            display: inline-block!important;
+            width: 20%!important;
+            margin-left: -4px !important;
+            padding: 0 10px 0 20px !important;
+            font-weight: 700;
+            color: #333;
+          }
+          select {
+            display: inline-block!important;
+            width: 80% !important;
+            margin-left: -4px !important;
+            border-radius: 5px !important;
+            //border: 1px solid #ccc;
+            border: none;
+            padding: 9px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+          input:focus,textarea:focus,select:focus {
+            box-shadow: 1px 1px 5px 2px rgba(98,136,140,0.75);
+          }
+        }
+      }
+    }
+    .form-side-content-wraper {
+      display: block;
+      .form-side {
+        display: block !important;
+        width: 100%!important;
+        margin-left: 0!important;
+        margin-bottom: 30px;
+        vertical-align: top;
+        padding: 0 15px;
+        .form-display {
+          padding: 25px;
+          background: #2f3b3e;
+          .filter-car-name {
+            position: relative;
+            margin-bottom: 30px;
+            .js-form-item {
+              margin: 0;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              input {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 100%;
+              }
+            }
+            #edit-submit--2 {
+              position: absolute;
+              right: 0;
+              border: 0;
+              border-radius: 0 3px 3px 0;
+              height: 40px;
+              background: #5dc302;
+              padding: 11px 12px;
+              color: #fff;
+              margin: 0;
+              top: 41px;
+            }
+          }
+
+          .filter-price-range,
+          .filter-car-city,
+          .filter-reg-city,
+          .filter-transmission,
+          .filter-fuel-type {         //TODO REMEMBER custom checkbox styling with css
+            margin-bottom: 30px;
+            legend {
+              font-size: 18px;
+              font-weight: 600;
+              font-family: "Raleway";
+              font-style: normal;
+              color: #5dc302;
+              margin-bottom: 20px;
+            }
+            .fieldset-wrapper {
+              .form-type-checkbox {
+                margin-top: 0;
+                margin-bottom: 4px;
+                padding: 5px 0;
+                position: relative;
+                input{
+                  opacity: 0;
+                }
+                input[type="checkbox"] + label {
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    height: 20px;
+                    //display: block;
+                    z-index: 999;
+                    top:5px;
+                  }
+
+                }
+                input[type="checkbox"]:checked + label {
+                  &:before {
+                    content: '\f00c';
+                    font-family: 'FontAwesome';
+                    color: #fff;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    z-index: 999;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    padding-left: 2px;
+                  }
+                }
+                label {
+                  color: #fff;
+                  .price-value,.city-name,.reg-city-name,.transmission-name,.fuel-type-name {         //TODO VALUE
+                    display: inline-block;
+                    width: 80%;
+                    text-align: left;
+                    padding-left: 5px;
+                  }
+                  .price-count,.city-count,.reg-city-count,.transmission-count,.fuel-type-count {        //TODO COUNT
+                    display: inline-block;
+                    width: 5%;
+                    text-align: right;
+                  }
+
+                }
+              }
+            }
+          }
+          .filter-car-from {
+            margin-bottom: 30px;
+            .js-form-item {
+              display: inline-block;
+              width: 50%;
+              margin-left: -4px;
+              padding-left: 5px;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              select {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 89%;
+              }
+            }
+            .form-no-label {
+              display: inline-block;
+              width: 50%;
+              margin-left: -4px;
+              padding-left: 15px;
+              select {
+                width: 100%;
+              }
+            }
+          }
+          .filter-car-type, .filter-car-brand {
+            margin-bottom: 30px;
+            .js-form-item {
+              display: block;
+              width: 100%;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              select {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 100%;
+              }
+            }
+          }
+          .update-results {
+            position: relative;
+            input {
+              background: #5dc302;
+              display: block;
+              border-radius: 0;
+              width: 100%;
+              color: #fff;
+              text-transform: uppercase;
+              font-weight: 700;
+              padding: 10px 15px;
+              border: 0;
+            }
+            &::before {
+              position: absolute;
+              content: "\f002";
+              font-family: FontAwesome;
+              color: #fff;
+              font-size: 16px;
+              z-index: 500;
+              top: 9px;
+              left: 27px;
+            }
+          }
+        }
+      }
+      .search-results-content {
+        display:block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        vertical-align: top;
+        padding: 0 15px;
+        .related-ads {
+          display: block;
+          padding: 20px;
+          background: #fff;
+          border: 1px solid #eee;
+          margin-bottom: 15px;
+          .block-content {
+            margin: 0 auto;
+            .search-image-wraper {
+              width: 100% !important;
+              display: inline-block;
+              img {
+
+              }
+            }
+            .car-info-wraper {
+              margin-top: 10px !important;
+              padding-left: 0 !important;
+              display: block !important;
+              vertical-align: top;
+              width: 100% !important;
+              h4 {
+                margin-top: 0;
+                font-family: "Raleway";
+                font-style: normal;
+                font-weight: 600;
+                color: #555;
+                font-size: 18px;
+                vertical-align: baseline;
+                margin-bottom: 8px;
+              }
+              .year-millage-city{
+                vertical-align: bottom;
+                .model-year{
+                  display: inline-block !important;
+                  margin-right: 20px;
+                  font-size: 16px !important;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f073';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .millage {
+                  margin-top: 0 !important;
+                  font-size: 16px !important;
+                  display: inline-block !important;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f0e4';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .km {
+                  font-size: 16px !important;
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+                .city {
+                  margin-top: 0 !important;
+                  font-size: 16px !important;
+                  display: inline-block !important;
+                  margin-right: 20px;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f041';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+              }
+              .fuel-cc-transm {
+                padding: 12px 0;
+                color: #555;
+                font-size: 12px;
+                .fuel-type,
+                .ccm,
+                .transmission {
+                  &::after {
+                    content:'|';
+                    color: #c9cbcd;
+                    margin: 0 10px;
+                  }
+                }
+              }
+              .updated {
+                color: #555;
+                font-size: 12px;
+              }
+            }
+            .price-details {
+              text-align: left !important;
+              display: block !important;
+              vertical-align: top;
+              width: 100% !important;
+              float: none !important;
+              h3 {
+                margin-top: 20px !important;
+                font-size: 24px !important;
+              }
+              a {
+                margin-top:20px ;
+                text-decoration: none;
+                background: #5dc302;
+                display: inline-block;
+                border-radius: 5px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 8px 15px;
+                text-align: center;
+                font-size: 16px !important;
+                &::after {
+                  content: '\f0a9';
+                  font-family: FontAwesome;
+                  color: #fff;
+                  margin-left: 6px;
+                  font-weight: 300;
+                }
+                &:hover {
+                  background: #333;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+          &:hover {
+            border: 1px solid #5dc302;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:$screen-xs) {
+  #car-search {
+    padding: 50px 0;
+    .filter-sort-by {
+      display: block;
+    }
+    .form-side-content-wraper {
+      display: block;
+      .form-side {
+        display: block !important;
+        width: 100%!important;
+        margin-left: 0!important;
+        margin-bottom: 30px;
+        vertical-align: top;
+        padding: 0 15px;
+        .form-display {
+          padding: 25px;
+          background: #2f3b3e;
+          .filter-car-name {
+            position: relative;
+            margin-bottom: 30px;
+            .js-form-item {
+              margin: 0;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              input {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 100%;
+              }
+            }
+            #edit-submit--2 {
+              position: absolute;
+              right: 0;
+              border: 0;
+              border-radius: 0 3px 3px 0;
+              height: 40px;
+              background: #5dc302;
+              padding: 11px 12px;
+              color: #fff;
+              margin: 0;
+              top: 41px;
+            }
+          }
+
+          .filter-price-range,
+          .filter-car-city,
+          .filter-reg-city,
+          .filter-transmission,
+          .filter-fuel-type {         //TODO REMEMBER custom checkbox styling with css
+            margin-bottom: 30px;
+            legend {
+              font-size: 18px;
+              font-weight: 600;
+              font-family: "Raleway";
+              font-style: normal;
+              color: #5dc302;
+              margin-bottom: 20px;
+            }
+            .fieldset-wrapper {
+              .form-type-checkbox {
+                margin-top: 0;
+                margin-bottom: 4px;
+                padding: 5px 0;
+                position: relative;
+                input{
+                  opacity: 0;
+                }
+                input[type="checkbox"] + label {
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    height: 20px;
+                    //display: block;
+                    z-index: 999;
+                    top:5px;
+                  }
+
+                }
+                input[type="checkbox"]:checked + label {
+                  &:before {
+                    content: '\f00c';
+                    font-family: 'FontAwesome';
+                    color: #fff;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    z-index: 999;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    padding-left: 2px;
+                  }
+                }
+                label {
+                  color: #fff;
+                  .price-value,.city-name,.reg-city-name,.transmission-name,.fuel-type-name {         //TODO VALUE
+                    display: inline-block;
+                    width: 80%;
+                    text-align: left;
+                    padding-left: 5px;
+                  }
+                  .price-count,.city-count,.reg-city-count,.transmission-count,.fuel-type-count {        //TODO COUNT
+                    display: inline-block;
+                    width: 5%;
+                    text-align: right;
+                  }
+
+                }
+              }
+            }
+          }
+          .filter-car-from {
+            margin-bottom: 30px;
+            .js-form-item {
+              display: inline-block;
+              width: 50%;
+              margin-left: -4px;
+              padding-left: 5px;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              select {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 89%;
+              }
+            }
+            .form-no-label {
+              display: inline-block;
+              width: 50%;
+              margin-left: -4px;
+              padding-left: 15px;
+              select {
+                width: 100%;
+              }
+            }
+          }
+          .filter-car-type, .filter-car-brand {
+            margin-bottom: 30px;
+            .js-form-item {
+              display: block;
+              width: 100%;
+              label {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Raleway";
+                font-style: normal;
+                color: #5dc302;
+              }
+              select {
+                border-radius: 3px;
+                height: auto;
+                padding: 10px 12px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                background: #5e6a6d;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.3);
+                width: 100%;
+              }
+            }
+          }
+          .update-results {
+            position: relative;
+            input {
+              background: #5dc302;
+              display: block;
+              border-radius: 0;
+              width: 100%;
+              color: #fff;
+              text-transform: uppercase;
+              font-weight: 700;
+              padding: 10px 15px;
+              border: 0;
+            }
+            &::before {
+              position: absolute;
+              content: "\f002";
+              font-family: FontAwesome;
+              color: #fff;
+              font-size: 16px;
+              z-index: 500;
+              top: 9px;
+              left: 27px;
+            }
+          }
+        }
+      }
+      .search-results-content {
+        display:block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        vertical-align: top;
+        padding: 0 15px;
+        .related-ads {
+          display: block;
+          padding: 20px;
+          background: #fff;
+          border: 1px solid #eee;
+          margin-bottom: 15px;
+          .block-content {
+            margin: 0 auto;
+            .search-image-wraper {
+              width: 100%!important;
+              display: block!important;
+              img {
+
+              }
+            }
+            .car-info-wraper {
+              margin-top: 10px !important;
+              padding-left: 0 !important;
+              display: block !important;
+              vertical-align: top;
+              width: 100% !important;
+              h4 {
+                margin-top: 0;
+                font-family: "Raleway";
+                font-style: normal;
+                font-weight: 600;
+                color: #555;
+                font-size: 18px;
+                vertical-align: baseline;
+                margin-bottom: 8px;
+              }
+              .year-millage-city{
+                vertical-align: bottom;
+                .model-year{
+                  display: block !important;
+                  margin-right: 20px;
+                  font-size: 16px !important;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f073';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .millage {
+                  margin-top: 10px !important;
+                  font-size: 16px !important;
+                  display: inline-block !important;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f0e4';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .km {
+                  font-size: 16px !important;
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+                .city {
+                  margin-top: 10px !important;
+                  font-size: 16px !important;
+                  display: block !important;
+                  margin-right: 20px;
+                  &::before {
+                    font-size: 16px !important;
+                    content:'\f041';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+              }
+              .fuel-cc-transm {
+                padding: 12px 0;
+                color: #555;
+                font-size: 12px;
+                .fuel-type,
+                .ccm,
+                .transmission {
+                  &::after {
+                    content:'|';
+                    color: #c9cbcd;
+                    margin: 0 10px;
+                  }
+                }
+              }
+              .updated {
+                color: #555;
+                font-size: 12px;
+              }
+            }
+            .price-details {
+              text-align: left !important;
+              display: block !important;
+              vertical-align: top;
+              width: 100% !important;
+              float: none !important;
+              h3 {
+                margin-top: 20px !important;
+                font-size: 24px !important;
+              }
+              a {
+                margin-top:20px ;
+                text-decoration: none;
+                background: #5dc302;
+                display: inline-block;
+                border-radius: 5px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 8px 15px;
+                text-align: center;
+                font-size: 16px !important;
+                &::after {
+                  content: '\f0a9';
+                  font-family: FontAwesome;
+                  color: #fff;
+                  margin-left: 6px;
+                  font-weight: 300;
+                }
+                &:hover {
+                  background: #333;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+          &:hover {
+            border: 1px solid #5dc302;
+          }
+        }
+      }
+    }
+  }
+}
+#car-search {
+  padding: 50px 0;
+  .filter-sort-by-wraper {
+    padding: 0 15px;
+    margin-left: -4px ;
+    margin-right: 4px;
+    margin-bottom: 30px;
+    .filter-sort-by {
+      display: block;
+      padding: 18px;
+      background: #dde5ea;
+      .list-grid-wraper {
+        display: inline-block;
+        margin-left: -4px !important;
+        width: calc(100% / 3);
+        padding: 8px 7px;
+        .list-button {
+          border: 0;
+          background: 0;
+          i {
+            &::before {
+              font-size: 20px;
+              font: normal normal normal 20px/1 FontAwesome;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          }
+        }
+        .grid-button {
+          padding-left: 2px;
+          border: 0;
+          background: 0;
+          i {
+            &::before {
+              font-size: 20px;
+              font: normal normal normal 20px/1 FontAwesome;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          }
+        }
+      }
+      .js-form-item-sort-by {
+        display: inline-block;
+        margin-left: -4px !important;
+        width: 66.66%;
+        padding: 0 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        label {
+          padding: 0 10px 0 0;
+          font-weight: 700;
+          color: #333;
+        }
+        select {
+          width: 41%;
+          border-radius: 5px !important;
+          //border: 1px solid #ccc;
+          border: none;
+          padding: 8px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+        input:focus,textarea:focus,select:focus {
+          box-shadow: 1px 1px 5px 2px rgba(98,136,140,0.75);
+        }
+      }
+    }
+  }
+  .form-side-content-wraper {
+    display: block;
+    .form-side {
+      display: inline-block;
+      width: 25%;
+      margin-left: -4px !important;
+      margin-bottom: 30px;
+      vertical-align: top;
+      padding: 0 15px;
+      .form-display {
+        padding: 25px;
+        background: #2f3b3e;
+        .filter-car-name {
+          position: relative;
+          margin-bottom: 30px;
+          .js-form-item {
+           margin: 0;
+            label {
+              font-size: 18px;
+              font-weight: 600;
+              font-family: "Raleway";
+              font-style: normal;
+              color: #5dc302;
+            }
+            input {
+              border-radius: 3px;
+              height: auto;
+              padding: 10px 12px;
+              margin-bottom: 10px;
+              margin-top: 20px;
+              background: #5e6a6d;
+              color: #fff;
+              border: 1px solid rgba(255,255,255,0.3);
+              width: 100%;
+            }
+          }
+          #edit-submit--2 {
+            position: absolute;
+            right: 0;
+            border: 0;
+            border-radius: 0 3px 3px 0;
+            height: 40px;
+            background: #5dc302;
+            padding: 11px 12px;
+            color: #fff;
+            margin: 0;
+            top: 41px;
+          }
+        }
+
+        .filter-price-range,
+        .filter-car-city,
+        .filter-reg-city,
+        .filter-transmission,
+        .filter-fuel-type {         //TODO REMEMBER custom checkbox styling with css
+          margin-bottom: 30px;
+          legend {
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $font-raleway;
+            font-style: normal;
+            color: $light-green;
+            margin-bottom: 11px;
+          }
+          .fieldset-wrapper {
+            .form-type-checkbox {
+                margin-top: 0;
+                margin-bottom: 4px;
+                padding: 5px 0;
+                position: relative;
+                input{
+                  opacity: 0;
+                }
+                input[type="checkbox"] + label {
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    height: 20px;
+                    //display: block;
+                    z-index: 999;
+                    top:5px;
+                  }
+
+                }
+                input[type="checkbox"]:checked + label {
+                  &:before {
+                    content: '\f00c';
+                    @include fontawesome-icon;
+                    color: $color-white;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    z-index: 999;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: #5e6a6d;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    padding-left: 2px;
+                  }
+                }
+                label {
+                  color: #fff;
+                  .price-value,.city-name,.reg-city-name,.transmission-name,.fuel-type-name {         //TODO VALUE
+                    display: inline-block;
+                    width: 80%;
+                    text-align: left;
+                    padding-left: 5px;
+                  }
+                  .price-count,.city-count,.reg-city-count,.transmission-count,.fuel-type-count {        //TODO COUNT
+                    display: inline-block;
+                    width: 5%;
+                    text-align: right;
+                  }
+
+                }
+              }
+          }
+        }
+        .filter-car-from {
+          margin-bottom: 30px;
+          .js-form-item {
+            display: inline-block;
+            width: 50%;
+            margin-left: -4px;
+            padding-left: 5px;
+            label {
+              font-size: 18px;
+              font-weight: 600;
+              font-family: "Raleway";
+              font-style: normal;
+              color: #5dc302;
+            }
+            select {
+              border-radius: 3px;
+              height: auto;
+              padding: 10px 12px;
+              margin-bottom: 10px;
+              margin-top: 20px;
+              background: #5e6a6d;
+              color: #fff;
+              border: 1px solid rgba(255,255,255,0.3);
+              width: 89%;
+            }
+          }
+          .form-no-label {
+            display: inline-block;
+            width: 50%;
+            margin-left: -4px;
+            padding-left: 15px;
+            select {
+              width: 100%;
+            }
+          }
+        }
+        .filter-car-type, .filter-car-brand {
+          margin-bottom: 30px;
+          .js-form-item {
+            display: block;
+            width: 100%;
+            label {
+              font-size: 18px;
+              font-weight: 600;
+              font-family: "Raleway";
+              font-style: normal;
+              color: #5dc302;
+            }
+            select {
+              border-radius: 3px;
+              height: auto;
+              padding: 10px 12px;
+              margin-bottom: 10px;
+              margin-top: 20px;
+              background: #5e6a6d;
+              color: #fff;
+              border: 1px solid rgba(255,255,255,0.3);
+              width: 100%;
+            }
+          }
+        }
+        .update-results {
+          position: relative;
+          input {
+            background: #5dc302;
+            display: block;
+            border-radius: 0;
+            width: 100%;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 10px 15px;
+            border: 0;
+          }
+          &::before {
+            position: absolute;
+            content: "\f002";
+            font-family: FontAwesome;
+            color: #fff;
+            font-size: 16px;
+            z-index: 500;
+            top: 9px;
+            left: 27px;
+          }
+        }
+      }
+    }
+    .search-results-content {           // TODO LIST VIEW
+      display: inline-block;
+      width: 75%;
+      margin-left: -4px !important;
+      vertical-align: top;
+      padding: 0 15px;
+      .related-ads {
+        display: block;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #eee;
+        margin-bottom: 15px;
+        .block-content {
+          margin-bottom: -1px;
+          .search-image-wraper {
+            width: 22%;
+            display: inline-block;
+            img {
+
+            }
+          }
+          .car-info-wraper {
+            padding-left: 33px;
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            a {
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+                color: #555;
+              }
+              h4 {
+                margin-top: 6px;
+                font-family: "Raleway";
+                font-style: normal;
+                font-weight: 600;
+                color: #555;
+                font-size: 18px;
+                vertical-align: baseline;
+                margin-bottom: 8px;
+              }
+            }
+            .year-millage-city{
+              vertical-align: bottom;
+              .model-year{
+                margin-right: 14px;
+                &::before {
+                  content:'\f073';
+                  font-family: FontAwesome;
+                  padding-right: 8px;
+                  color: #5dc302;
+                }
+              }
+              .millage {
+                &::before {
+                  content:'\f0e4';
+                  font-family: FontAwesome;
+                  padding-right: 8px;
+                  color: #5dc302;
+                }
+              }
+              .km {
+                margin-right: 20px;
+              }
+              .city {
+                margin-right: 20px;
+                &::before {
+                  content:'\f041';
+                  font-family: FontAwesome;
+                  padding-right: 8px;
+                  color: #5dc302;
+                }
+              }
+            }
+            .fuel-cc-transm {
+              padding: 9px 0;
+              color: #555;
+              font-size: 12px;
+              .fuel-type,
+              .ccm,
+              .transmission {
+                &::after {
+                  content:'|';
+                  color: #c9cbcd;
+                  margin: 0 10px;
+                }
+              }
+            }
+            .updated {
+              color: #555;
+              font-size: 12px;
+            }
+          }
+          .price-details {
+            text-align: right;
+            display: inline-block;
+            vertical-align: top;
+            width: 21%;
+            float: right;
+            h3 {
+              margin-top: -4px;
+              margin-bottom: 4px;
+              font-size: 24px;
+            }
+            a {
+              margin-top:11px ;
+              text-decoration: none;
+              background: #5dc302;
+              display: inline-block;
+              border-radius: 5px;
+              color: #fff;
+              text-transform: uppercase;
+              font-weight: 600;
+              padding: 8px 20px;
+              text-align: center;
+              &::after {
+                content: '\f0a9';
+                font-family: FontAwesome;
+                color: #fff;
+                margin-left: 6px;
+                font-weight: 300;
+              }
+              &:hover {
+                background: #333;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        &:hover {
+          border: 1px solid #5dc302;
+        }
+      }
+    }
+    .search-results-content.search-grid {
+      display: inline-block;
+      width: 75%;
+      margin-left: -4px;
+      vertical-align: top;
+      padding: 0;
+      .related-ads-wraper {
+        padding: 0 15px 15px 15px;
+        width: calc(100% / 3);
+        margin-left: -4px;
+        display: inline-block;
+        vertical-align: top;
+        .related-ads {
+          padding: 20px;
+          background: #fff;
+          border: 1px solid #eee;
+          margin-bottom: 15px;
+          .block-content {
+            margin: 0 auto;
+            .search-image-wraper {
+              display: block;
+              width: 100%;
+            img {
+
+            }
+            }
+            .car-info-wraper {
+              margin-top: 10px;
+              padding-left: 0;
+              display: block;
+              vertical-align: top;
+              width: 100%;
+              h4 {
+                margin-top: 0;
+                font-family: "Raleway";
+                font-style: normal;
+                font-weight: 600;
+                color: #555;
+                font-size: 18px;
+                vertical-align: baseline;
+                margin-bottom: 8px;
+              }
+              .year-millage-city {
+                vertical-align: bottom;
+                .model-year {
+                  display: none;
+                  margin-right: 20px;
+                  font-size: 16px;
+                  &::before {
+                    font-size: 16px;
+                    content: '\f073';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .millage {
+                  margin-top: 10px ;
+                  font-size: 14px ;
+                  display: inline-block ;
+                  margin-left: -4px;
+                  &::before {
+                    font-size: 14px ;
+                    content: '\f0e4';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+                .km {
+                  font-size: 14px ;
+                  display: inline-block;
+                  margin-right: 10px;
+                }
+                .city {
+                  margin-top: 10px ;
+                  font-size: 14px ;
+                  display: inline-block ;
+                  margin-right: 20px;
+                  margin-left: -4px;
+                  &::before {
+                    font-size: 14px ;
+                    content: '\f041';
+                    font-family: FontAwesome;
+                    padding-right: 8px;
+                    color: #5dc302;
+                  }
+                }
+              }
+              .fuel-cc-transm {
+                padding: 12px 0;
+                color: #555;
+                font-size: 12px;
+                .fuel-type,
+                .ccm,
+                .transmission {
+                  &::after {
+                    content: '|';
+                    color: #c9cbcd;
+                    margin: 0 2px;
+                  }
+                }
+              }
+              .updated {
+                color: #555;
+                font-size: 12px;
+              }
+            }
+            .price-details {
+              text-align: left;
+              display: block;
+              vertical-align: top;
+              width: 100%;
+              float: none;
+              h3 {
+                margin-top: 10px;
+                font-size: 24px;
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 700;
+              }
+              a {
+                width: 100%;
+                margin-top: 10px;
+                text-decoration: none;
+                background: #5dc302;
+                display: inline-block;
+                border-radius: 5px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 8px 20px;
+                text-align: center;
+                font-size: 14px;
+                &::after {
+                  content: '\f0a9';
+                  font-family: FontAwesome;
+                  color: #fff;
+                  margin-left: 6px;
+                  font-weight: 300;
+                }
+                &:hover {
+                  background: #333;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+          &:hover {
+            border: 1px solid #5dc302;
+          }
+        }
+      }
+    }           // TODO GRID VIEW
+  }
+}
+
+
+body .path-car-search{
+  main {
+    .region-newsletter {
+      padding: 0;
+      max-width: none;
+    }
+  }
+}

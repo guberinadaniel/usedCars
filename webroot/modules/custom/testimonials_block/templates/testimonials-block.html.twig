@@ -1,0 +1,14 @@
+{% for entry in content %}
+<li class="dota-2">
+    <div class="node-content-wraper">
+        <div class="test-image">
+            <img src="{{ entry.image }}"/>
+        </div>
+        <h3>{{ entry.name }} ({{ entry.occupation }})</h3>
+        <div class="city-state">
+            {{ entry.city }}, {{ entry.country }}
+        </div>
+        <p>"{{ entry.testimonial_comment }}"</p>
+    </div>
+</li>
+{% endfor %}

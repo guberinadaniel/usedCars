@@ -1,0 +1,41 @@
+// ========================================
+//
+// @file _buttons.scss
+// Form buttons, call to action buttons
+//
+// ========================================
+
+// view details button -----------------------------------
+
+.price-details {
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  h3 {
+    margin: 0;
+  }
+  a {
+    margin-top:20px ;
+    text-decoration: none;
+    background: #5dc302;
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 15px;
+    text-align: center;
+    &::after {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      color: #fff;
+      margin-left: 6px;
+      font-weight: 300;
+    }
+    &:hover {
+      background: #333;
+      text-decoration: none;
+    }
+  }
+}
+//-------------------------------------------------------------

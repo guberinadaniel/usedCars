@@ -1,0 +1,9 @@
+
+hero_search.hero_form:
+  path: '/hero_search/form/hero'
+  defaults:
+    _form: '\Drupal\hero_search\Form\HeroForm'
+    _title: 'HeroForm'
+  requirements:
+    _access: 'TRUE'
+  

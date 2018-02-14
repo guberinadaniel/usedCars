@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Registered city'
+vid: registered_city
+description: 'Car registration city'
+hierarchy: 0
+weight: 0

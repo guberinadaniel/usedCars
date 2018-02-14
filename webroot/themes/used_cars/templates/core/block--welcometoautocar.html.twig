@@ -1,0 +1,30 @@
+{%
+set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+'welcomeauto',
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      <div class="welcomeauto-wraper">
+        <div class="welcomeauto-image">
+            {{ content.field_image }}
+        </div>
+        <div class="welcomeauto-fields">
+          <div class="padding-wraper">
+              {{ content.field_subtitle_h4 }}
+              {{ content.field_title_h2 }}
+              {{ content.field_some_text }}
+              {{ content.field_some_list_of_text }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+</div>

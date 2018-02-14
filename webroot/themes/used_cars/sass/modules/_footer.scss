@@ -1,0 +1,138 @@
+footer {
+  width: 100%;
+  background: #252c31 url(../../assets/images/background-images/footer-cars-compressor.png) no-repeat;
+  background-size: cover;
+  display: block;
+}
+.region-footer-menu {
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 1170px;
+  .footer-wraper {
+    padding: 30px 20px;
+    text-align: center;
+    #block-carsbymake, #block-carsbycity {
+      max-width: 210px;
+      min-width: 210px;
+      width: 100%;
+      text-align: left;
+    }
+    #block-exploreus, #block-quicklinks, #block-helpcenter {
+      max-width: 210px;
+      min-width: 210px;
+      width: 100%;
+      text-align: left;
+    }
+    #block-carsbymake,
+    #block-carsbycity,
+    #block-exploreus,
+    #block-quicklinks,
+    #block-helpcenter {
+      vertical-align: text-top;
+      display: inline-block;
+      margin: 30px auto;
+      h2 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 15px;
+        margin-top: 20px;
+      }
+      .field__item {
+        display: block;
+        margin: 0 auto;
+        font-size: 13px;
+        padding: 4px 0;
+        a {
+          text-decoration: none;
+          color: #ccc;
+          &::before {
+            content: '\f0da';
+            font-family: FontAwesome;
+            padding-right: 8px;
+          }
+          &:hover {
+            color: #5dc302;
+          }
+        }
+      }
+    }
+  }
+}
+
+.region-footer-links{
+  margin: 0 auto;
+  max-width: 1170px;
+  ul {
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding-top:15px;
+    text-align: center;
+    li {
+      display: inline-block;
+      list-style-type: none;
+    }
+  }
+  .item-list--linkicon {
+    padding: 0 30px;
+    ul {
+      li {
+        margin: 5px 5px;
+        .linkicon__item {
+          width: 36px;
+          height: 36px;
+          .linkicon__icon {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            font-size: 24px;
+            background-color: #fff;
+            color: #252c31;
+            width: 30px;
+            height: 30px;
+            &:hover {
+              background-color: #5dc302;
+              border: 1px solid #5dc302;
+              border-radius: 5px;
+              transition-duration: 0.4s;
+            }
+          }
+          .linkicon__text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .field--name-field-some-text-in-footer {
+    padding: 0 30px 20px 30px;
+    p {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+      font-size: 13px;
+      text-align: center;
+      color: #999;
+    }
+  }
+}
+
+#block-copyrightstuff {
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  .field--name-field-text-field-copyright {
+    display: inline-block;
+    color: #888;
+  }
+  .field--name-field-design-by- {
+    display: inline-block;
+    a {
+      font-size: 16px;
+      color: #5dc302;
+      text-decoration: none;
+      &:hover {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+}

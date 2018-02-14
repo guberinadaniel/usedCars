@@ -1,0 +1,15 @@
+<h5>Recent posts</h5>
+{% for entry in content %}
+    <div class="blog-block-wraper">
+
+        <div class="image-blog-side">
+            <a href="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+        </div>
+        <div class="link-blog-date">
+        <a href="{{ entry.nid }}"><p>{{ entry.title }}</p></a>
+        <p class="blog-date">{{ entry.created|date('M d, Y') }}</p>
+        {#<p>{{ entry.blog_text }}</p>#}
+        </div>
+    </div>
+{% endfor %}
+

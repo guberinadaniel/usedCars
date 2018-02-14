@@ -1,0 +1,23 @@
+# Global CSS files
+global-css:
+  version: 1.x
+  css:
+    theme:
+      assets/stylesheets/application.css:
+        minified: false
+      assets/stylesheets/tester.css:
+        minified: false
+      assets/stylesheets/vendor/font-awesome/scss/font-awesome.css:
+        minified: false
+
+# Global JS files
+global-js:
+  version: 1.x
+  js:
+    assets/scripts/vendor/jquery.flexslider.js:
+    assets/scripts/vendor/slick.js:
+    assets/scripts/application.js:
+      minified: false
+  dependencies:
+    - core/jquery
+    - core/jquery.once

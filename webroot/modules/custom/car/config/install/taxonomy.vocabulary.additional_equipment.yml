@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Additional equipment'
+vid: additional_equipment
+description: 'Car equipment'
+hierarchy: 0
+weight: 0

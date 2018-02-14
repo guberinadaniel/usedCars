@@ -1,0 +1,22 @@
+{% for entry in content %}
+    <li class="dota-2">
+        <div class="node-content-wraper">
+            <div class="car-info-wraper">
+                <h4>{{ entry.title }} <span class="model-year">{{ entry.model_year }}</span></h4>
+                <h3>${{ entry.price|number_format(2, '.', ',') }}</h3>
+                <div class="city">
+                    {{ entry.city }}, {{ entry.state }}
+                </div>
+            </div>
+            <div class="image-zoom">
+                <div class="ribbon-featured">
+                    <span>Featured</span>
+                </div>
+                <img src="{{ entry.image }}"/>
+            </div>
+            <div class="price-details">
+                <a href="{{ entry.nid }}">View details</a>
+            </div>
+        </div>
+    </li>
+{% endfor %}

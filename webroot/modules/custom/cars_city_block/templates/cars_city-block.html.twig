@@ -1,0 +1,5 @@
+<div class="cars-city-wraper">
+{% for entry in content %}
+    <div class="col-25"><p><a href="{{ entry.tid }}">{{ entry.city }}</a><span class="car-city-count">({{ entry.count }})</span></p></div>
+{% endfor %}
+</div>

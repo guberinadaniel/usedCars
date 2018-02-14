@@ -1,0 +1,261 @@
+@media (max-width:$screen-md) {
+  #block-findusedcarsinunitedstatesbanner {
+    position: relative;
+    .fluid {
+      .field--name-field-banner-image {
+        height: 488px;
+        img {
+          height: 488px;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+    .layout-wraper {
+      .field--name-field-banner-caption {
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        //padding: 100px 0;
+        h3 {
+          font-family: "Raleway";
+          font-weight: 600;
+          font-size: 48px;
+          width: 100%;
+          margin: 0;
+        }
+        p {
+          font-size: 18px;
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:$screen-sm) {
+  #block-findusedcarsinunitedstatesbanner {
+    position: relative;
+    .field--name-field-banner-caption {
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 65px;
+      width: 100%;
+      //padding: 100px 0;
+      h3 {
+        font-family: "Raleway";
+        font-weight: 600;
+        font-size: 24px !important;
+        width: 100%;
+        margin: 0;
+        padding: 0 15px !important;
+      }
+      p {
+        font-size: 18px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 15px !important;
+      }
+    }
+    .field--name-field-banner-image {
+      height: 410px;
+      img {
+        height: 410px;
+        object-fit: cover;
+        width: 100% ;
+      }
+    }
+  }
+}
+@media (max-width:$screen-xs) {
+  #block-findusedcarsinunitedstatesbanner {
+    position: relative;
+    .field--name-field-banner-caption {
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 65px;
+      width: 100%;
+      //padding: 100px 0;
+      h3 {
+        font-family: "Raleway";
+        font-weight: 600;
+        font-size: 24px !important;
+        width: 100%;
+        margin: 0;
+        padding: 0 15px !important;
+      }
+      p {
+        font-size: 18px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 15px !important;
+      }
+    }
+    .field--name-field-banner-image {
+      height: 410px;
+      img {
+        height: 410px;
+        object-fit: cover;
+        width: 100% ;
+      }
+    }
+  }
+}
+#block-findusedcarsinunitedstatesbanner {
+  position: relative;
+  .field--name-field-banner-caption {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    //padding: 100px 0;
+    h3 {
+      font-family: "Raleway";
+      font-weight: 600;
+      font-size: 48px;
+      width: 100%;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  .field--name-field-banner-image {
+    height: 410px;
+    img {
+      height: 410px;
+      object-fit: cover;
+      width: 100% ;
+    }
+  }
+}
+
+
+
+
+// Sarch bar in the banner region on the homepage
+@media (max-width:$screen-md) {
+  .region-search-filter #block-article2block {
+    padding: 0 15px;
+    #hero-form {
+      .form-item {
+        display: block;
+        width: 100%;
+        input, select {
+          margin-bottom: 15px;
+        }
+      }
+      .button-div {
+        display: block;
+        width: 100%;
+      }
+      #edit-submit {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width:$screen-xs) {
+  .region-search-filter {
+    position: relative;
+    #block-articleblock-2,
+    #block-article2block {
+      margin-top: 40px;
+      position: absolute;
+      top: 60% !important;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+#block-article2block {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 50px;
+  .form-item {
+    margin: 0;
+  }
+  input, select {
+    height: 50px;
+    background-color: #fff;
+  }
+  #hero-form {
+    padding: 20px;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    .js-form-item-car-name {
+      display: inline-block;
+      width: 49%;
+      input {
+        width: 100%;
+        border-radius: 0;
+        border: 0;
+        padding-left: 20px;
+        font-size: 18px;
+      }
+    }
+    .js-form-item-price-range {
+      display: inline-block;
+      width: 16.6%;
+      font-size: 18px;
+      color: #555;
+      .form-select {
+        border-radius: 0;
+        border: 0;
+        padding-left: 20px;
+        width: 100%;
+      }
+    }
+    .js-form-item-city {
+      display: inline-block;
+      width: 16.6%;
+      font-size: 18px;
+      color: #555;
+      .form-select {
+        border-radius: 0;
+        border: 0;
+        padding-left: 20px;
+        width: 100%;
+      }
+    }
+    .button-div {
+      min-width: 16.00%;
+      display: inline-block;
+      input {
+        width: 100%;
+        background: #5dc302;
+        border-radius: 0;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 14px 30px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+.region-search-filter {
+  position: relative;
+  #block-articleblock-2,
+  #block-article2block {
+    margin-top: 40px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

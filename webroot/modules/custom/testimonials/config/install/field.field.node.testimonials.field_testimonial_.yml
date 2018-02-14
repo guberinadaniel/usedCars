@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_
+    - node.type.testimonials
+id: node.testimonials.field_testimonial_
+field_name: field_testimonial_
+entity_type: node
+bundle: testimonials
+label: 'testimonial name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

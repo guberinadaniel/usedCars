@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Car information type'
+vid: car_information_type
+description: 'Buying or selling'
+hierarchy: 0
+weight: 0

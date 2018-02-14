@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Car brand'
+vid: car_brand
+description: 'Car maker'
+hierarchy: 0
+weight: 0

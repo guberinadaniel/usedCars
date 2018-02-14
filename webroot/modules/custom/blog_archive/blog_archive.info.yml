@@ -1,0 +1,5 @@
+name: Blog archive block
+description: Archive date block
+package: Custom block
+type: module
+core: 8.x

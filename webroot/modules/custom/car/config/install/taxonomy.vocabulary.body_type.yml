@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Body type'
+vid: body_type
+description: 'Vehicle body type'
+hierarchy: 0
+weight: 0

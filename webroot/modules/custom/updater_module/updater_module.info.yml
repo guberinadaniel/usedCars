@@ -1,0 +1,5 @@
+name: updater_module
+type: module
+description: Module for hook update
+core: 8.x
+package: Custom

@@ -1,0 +1,33 @@
+<div>
+    {{ form.filters.sort }}
+</div>
+{#{{ form.form_build_id }}#}
+{#{{ form.form_token }}#}
+{#{{ form.form_id }}#}
+
+<div class="row">
+    <div class="col-md-6">
+        {{ form.filters.title }}
+    </div>
+    <div class="col-md-6">
+        {{ form.filters.published }}
+    </div>
+    <div class="col-md-6">
+        {{ form.filters.actions.submit }}
+    </div>
+</div>
+
+<div class="row">
+    {% for entry in form.content.data %}
+        {% if entry is iterable %}
+            <div class="search-title">
+                <h2>{{ entry.title }}</h2>
+            </div>
+            <div class="search-image">
+                <img src="{{ entry.image }}"/>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{{ form.pager }}

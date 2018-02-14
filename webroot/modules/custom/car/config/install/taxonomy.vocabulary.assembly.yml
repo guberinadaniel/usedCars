@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Assembly
+vid: assembly
+description: 'Car origin'
+hierarchy: 0
+weight: 0

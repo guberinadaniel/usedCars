@@ -1,0 +1,102 @@
+/*.field--name-field-additional-equipment .field__item::before {*/
+    /*!*content: "hdhdhd";*!*/
+    /*content: url("../images/taxonomyicons/cd-player.png");*/
+/*}*/
+
+/*.sidebar-first .region-content{*/
+    /*width: 75%;*/
+    /*float: right;*/
+    /*margin: 30px auto;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.region-sidebar-first{*/
+    /*float: left;*/
+    /*margin: 40px auto;*/
+    /*width: 24%;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: baseline;*/
+/*}*/
+
+/*.sidebar-none .region-content{*/
+    /*max-width: 100%;*/
+/*}*/
+
+/*.sidebar-second .region-content{*/
+    /*width: 75%;*/
+    /*float: left;*/
+    /*margin: 30px auto;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.region-sidebar-second {*/
+    /*float: right;*/
+    /*margin: 50px auto;*/
+    /*width: 24%;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: baseline;*/
+/*}*/
+
+footer {
+    clear: both;
+}
+
+.breadcrumb li::before {
+    content: '\2F';
+}
+.backtotop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+.backtotop i {
+    font-size: 3em;
+    color: #55af02;
+}
+.backtotop i:hover {
+    color: #519e02;
+}
+.edit-reset-car-search {
+    margin: 5px auto;
+    background: #5dc302;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+
+}
+#user-login-form .user_title {
+    text-align: left;
+    font-size: 20px;
+    color: #555;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+/*.p-submited-content-wraper .username {*/
+    /*font-weight: 600;*/
+    /*color: #00b1f1;*/
+    /*font-size: 16px;*/
+    /*text-transform: capitalize;*/
+    /*text-decoration: none;*/
+/*}*/
+
+.p-submited-content-wraper .username::after {
+    content: ' ';
+    display: block;
+}
+
+p.comment__submitted {
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+
+}
+
+.js-form-item-field-comment-email-0-value label {
+    display: none;
+}

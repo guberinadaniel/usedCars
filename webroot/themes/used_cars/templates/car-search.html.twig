@@ -1,0 +1,103 @@
+{#{{ form.form_build_id }}#}
+{#{{ form.form_token }}#}
+{#{{ form.form_id }}#}
+{#<div class="testinjo">#}
+    {#{% for entry in form['#content'].data %}#}
+        {#{% if entry is iterable %}#}
+            {#{{ form.filters.container }}#}
+            {#<div class="car-info-wraper">#}
+                {#<span class="model-year">{{ entry.title }}</span>#}
+                {#<span class="model-year">{{ entry.model_year }}</span>#}
+                {#<span class="city">{{ entry.city }}</span>#}
+            {#</div>#}
+        {#{% endif %}#}
+    {#{% endfor %}#}
+{#</div>#}
+<div class="filter-sort-by-wraper">
+    <div class="filter-sort-by">
+        <div class="list-grid-wraper">
+            <button class="list-button" type="button" title="List view"><i class="fa fa-th-list"></i></button>
+            <button class="grid-button" type="button" title="Grid view"><i class="fa fa-th-large"></i></button>
+        </div>
+        {{ form.filters.sort_by }}
+    </div>
+</div>
+<div class="form-side-content-wraper">
+    <div class="form-side">
+        <div class="form-display">
+            <div class="filter-car-name">
+                {{ form.filters.car_name }}
+                {{ form.filters.actions_go.submit }}
+            </div>
+            <div class="filter-price-range">
+                {{ form.filters.price_range }}
+            </div>
+            <div class="filter-car-city">
+                {{ form.filters.city }}
+            </div>
+            <div class="filter-reg-city">
+                {{ form.filters.registered_city }}
+            </div>
+            <div class="filter-car-from">
+                {{ form.filters.from }}
+                {{ form.filters.to }}
+            </div>
+
+            <div class="filter-car-type">
+                {{ form.filters.car_type }}
+            </div>
+            <div class="filter-car-brand">
+                {{ form.filters.car_brand }}
+            </div>
+
+
+            <div class="filter-transmission">
+                {{ form.filters.transmission }}
+            </div>
+            <div class="filter-fuel-type">
+                {{ form.filters.fuel_type }}
+            </div>
+
+            <div class="update-results">
+                {{ form.filters.actions.submit }}
+                {{ form.filters.reset }}
+            </div>
+
+        </div>
+    </div>
+    <div class="search-results-content">
+        {% for entry in form['#content'].data %}
+            {% if entry is iterable %}
+                <div class="related-ads-wraper">
+                    <div class="related-ads">
+                        <div class="block-content">
+                            <div class="search-image-wraper">
+                            <img src="{{ entry.image }}"/>
+                            </div>
+                            <div class="car-info-wraper">
+                                <a href="{{ entry.nid }}"><h4>{{ entry.title }} for Sale</h4></a>
+                                <div class="year-millage-city">
+                                    <span class="model-year">{{ entry.model_year }}</span>
+                                    <span class="millage">{{ entry.millage }}</span><span class="km"> km</span>
+                                    <span class="city">{{ entry.city }}</span>
+                                </div>
+                                <div class="fuel-cc-transm">
+                                    <span class="fuel-type">{{ entry.fuel_type }}</span>
+                                    <span class="engine">{{ entry.engine_capacity }}</span><span class="ccm"> cc</span>
+                                    <span class="transmission">{{ entry.transmission }}</span>
+                                </div>
+                                <span class="updated">Last Updated: {{ entry.changed }} ago</span>
+                            </div>
+                            <div class="price-details">
+                                <h3>${{ entry.price|number_format(2, '.', ',') }}</h3>
+                                <a href="{{ entry.nid }}">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        {{ form.pager }}
+    </div>
+</div>

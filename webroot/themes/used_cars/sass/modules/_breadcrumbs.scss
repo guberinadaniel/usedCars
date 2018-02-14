@@ -1,0 +1,99 @@
+@media (max-width:$screen-sm) {
+  .region-breadcrumb {
+    width: 100%;
+    background: url(../../assets/images/background-images/breadcrumbs-bg.jpg) no-repeat;
+    background-size: cover;
+    display: block;
+    padding: 30px 15px;
+    h1 {
+      display: none;
+    }
+    #block-used-cars-page-title {
+      width: 100% !important;
+      text-align: center !important;
+      display: block !important;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      padding-left: 15px;
+      h2 {
+        font-size: 32px;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 0;
+        span {
+
+        }
+      }
+    }
+    #block-used-cars-breadcrumbs {
+      width: 100% !important;
+      text-align: center !important;
+      display: block !important;
+      vertical-align: bottom;
+      padding-right: 15px;
+      .breadcrumb {
+        a{
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        li{
+          color: #5dc302;
+        }
+      }
+    }
+  }
+}
+.region-breadcrumb {
+  width: 100%;
+  background: url(../../assets/images/background-images/breadcrumbs-bg.jpg) no-repeat;
+  background-size: cover;
+  display: block;
+  padding: 27px 15px;
+  h1 {
+    display: none;
+  }
+  #block-used-cars-page-title {
+    width: 70%;
+    text-align: left;
+    display: inline-block;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 15px;
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0;
+      margin-top: 0;
+      span {
+
+      }
+    }
+  }
+  #block-used-cars-breadcrumbs {
+    width: 29%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: bottom;
+    padding-right: 15px;
+    .breadcrumb {
+      font-size: 16px;
+      a{
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      li{
+        color: #5dc302;
+      }
+    }
+  }
+}

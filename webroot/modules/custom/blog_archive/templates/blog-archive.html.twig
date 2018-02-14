@@ -1,0 +1,6 @@
+<h5>Archives</h5>
+<ul class="blog-archive-list">
+{% for entry in content %}
+   <li><span class="blog-number">{{ entry.count }}</span><a href="/archive{{ entry.url }}">{{ entry.date }}</a></li>
+{% endfor %}
+</ul>

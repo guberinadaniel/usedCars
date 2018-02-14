@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_car_
+    - node.type.car
+id: node.car.field_car_
+field_name: field_car_
+entity_type: node
+bundle: car
+label: 'Car color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

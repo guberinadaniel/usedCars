@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains car_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function car_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the car_search module.
+    case 'help.page.car_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('car search module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function car_search_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'car_search' => array(
+            'render element'  => 'form',
+        ),
+    ];
+}

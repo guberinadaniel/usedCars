@@ -1,0 +1,276 @@
+<?php
+/**
+ * Implements hook_theme_suggestions_page_alter() to set 40x template suggestions.
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+function used_cars_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
+  $suggestions = theme_get_suggestions($path_args, 'page');
+  $http_error_suggestions = [
+    'system.401' => 'page__401',
+    'system.403' => 'page__403',
+    'system.404' => 'page__404',
+  ];
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (isset($http_error_suggestions[$route_name])) {
+    $suggestions[] = $http_error_suggestions[$route_name];
+  }
+}
+
+function used_cars_preprocess_html(&$variables)
+{
+    // Add information about the number of sidebars.
+    if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+        $variables['attributes']['class'][] = 'sidebar-both';
+    } elseif (!empty($variables['page']['sidebar_first'])) {
+        $variables['attributes']['class'][] = 'sidebar-first';
+    } elseif (!empty($variables['page']['sidebar_second'])) {
+        $variables['attributes']['class'][] = 'sidebar-second';
+    } else {
+        $variables['attributes']['class'][] = 'sidebar-none';
+    }
+}
+
+
+function used_cars_form_alter(&$form, $form_state, $form_id) {
+    if ($form_id === 'user_login_form') {
+        $form['name']['#placeholder'] = t('Username');
+        $form['pass']['#placeholder'] = t('Password');
+        $form['name']['#title'] = false;
+        $form['pass']['#title'] = false;
+        $form['name']['#description'] = false;
+        $form['pass']['#description'] = false;
+        $form['action']['#description'] = false;
+        $form['actions']['submit']['#value'] = t('LOGIN');
+        $form['actions']['#weight'] = 1;
+
+        $form['userreg'] = ['#markup' => '<span class="usernew">New User? </span><a class ="register-here" href="/user/register">Register Here</a>',
+            '#allowed_tags' => ['a','span'], ];
+
+        $form['userhr'] = ['#markup' => '<hr class="user_hr" />',
+            '#allowed_tags' => ['hr',], ];
+
+        $form['usermsg'] = ['#markup' => '<p class="user_msg">Login Or Register with Social</p>',
+            '#allowed_tags' => ['p',], ];
+
+        $form['facebook'] = ['#markup' => '<a class="user_fb" href="http://facebook.com"></a>',
+                          '#allowed_tags' => ['a',], ];
+
+        $form['google'] = ['#markup' => '<a class="user_goo" href="http://plus.google.com"></a>',
+            '#allowed_tags' => ['a',], ];
+
+        $form['twitter'] = ['#markup' => '<a class="user_tw" href="http://twitter.com"></a>',
+            '#allowed_tags' => ['a',], ];
+
+        $form['usertitle'] = ['#markup' => '<p class="user_title">User Login</p>',
+            '#allowed_tags' => ['p',], ];
+
+        $form['userreg']['#weight'] = 2;
+        $form['userhr'] ['#weight'] =3;
+        $form['usermsg']['#weight'] = 4;
+        $form['facebook']['#weight'] = 5;
+        $form['google']['#weight'] = 6;
+        $form['twitter']['#weight'] = 7;
+        $form['usertitle']['#weight'] = -1;
+
+
+
+
+
+    }
+    if ($form_id === 'search_block_form') {
+        $form['keys']['#placeholder'] = t('Search');
+    }
+
+    if ($form_id === 'user_register_form') {
+        $form['name']['#placeholder'] =t('Username');
+        $form['pass']['#placeholder'] = t('Password');
+        $form['mail']['widget']['#placeholder'] = t('Email');
+        $form['field_user_phone']['widget']['#title'] = false;
+        $form['mail']['#title'] = false;
+        $form['name']['#title'] = false;
+        $form['field_new_used']['widget']['#options']['_none']= 'Ad Type';
+        $form['field_new_used']['widget']['#title']= false;
+        $form['actions']['submit']['#value'] = t('REGISTER');
+
+        $form['actions']['#weight'] = 6;
+
+        $form['userreg'] = ['#markup' => '<span class="usernew">Already a Member? </span><a class="register-here" href="/user/login">Login Here</a>',
+            '#allowed_tags' => ['a',], ];
+
+
+        $form['usermsg'] = ['#markup' => '<p class="user_msg">Login Or Register with Social</p>',
+            '#allowed_tags' => ['p',], ];
+
+        $form['facebook'] = ['#markup' => '<a class="user_fb" href="http://facebook.com"></a>',
+            '#allowed_tags' => ['a',], ];
+
+        $form['google'] = ['#markup' => '<a class="user_goo" href="http://plus.google.com"></a>',
+            '#allowed_tags' => ['a',], ];
+
+        $form['twitter'] = ['#markup' => '<a class="user_tw" href="http://twitter.com"></a>',
+            '#allowed_tags' => ['a',], ];
+
+        $form['userreg']['#weight'] = 7;
+        $form['usermsg']['#weight'] = 8;
+        $form['facebook']['#weight'] = 9;
+        $form['google']['#weight'] = 10;
+        $form['twitter']['#weight'] = 11;
+
+    }
+
+}
+
+function used_cars_form_node_form_alter(&$form, $form_state,$form_id) {
+    if ($form_id == 'node_car_form') {
+//        $form['field_car_']['#attributes']['#placeholder'] = 'Car Name';
+        $form['field_car_']['#label'] = false;
+        $form['field_car_type']['widget']['#options']['_none']= 'Car Type';
+        $form['field_car_type']['widget']['#title']= false;
+        $form['field_vehicle_category']['widget']['#options']['_none']= 'Select Main Category';
+        $form['field_vehicle_category']['widget']['#title']= false;
+        $form['field_car_brand']['widget']['#options']['_none']= 'Select Make';
+        $form['field_car_brand']['widget']['#title']= false;
+        $form['field_car_model_year']['widget']['#options']['_none']= 'Select Model';
+        $form['field_car_model_year']['widget']['#title']= false;
+        $form['field_car_assembly']['widget']['#options']['_none']= 'Assembly';
+        $form['field_car_assembly']['widget']['#title']= false;
+        $form['field_body_ty']['widget']['#options']['_none']= 'Body Type';
+        $form['field_body_ty']['widget']['#title']= false;
+        $form['field_registered_city']['widget']['#options']['_none']= 'Registered City';
+        $form['field_registered_city']['widget']['#title']= false;
+        $form['field_transmission']['widget']['#options']['_none']= 'Transmission';
+        $form['field_transmission']['widget']['#title']= false;
+        $form['field_fue']['widget']['#options']['_none']= 'Fuel Type';
+        $form['field_fue']['widget']['#title']= false;
+        $form['field_car_image']['#value']= t('uuuuu');
+
+
+
+    }
+
+}
+
+
+function used_cars_theme( $existing, $type, $theme, $path ) {
+    return [
+        'car_search' => [
+            'render element' => 'form',
+        ],
+    ];
+}
+
+function used_cars_preprocess_comment(&$variables) {
+
+    /** @var \Drupal\comment\CommentInterface $comment */
+    $comment = $variables['elements']['#comment'];
+    $commented_entity = $comment->getCommentedEntity();
+    $variables['comment'] = $comment;
+    $variables['commented_entity'] = $commented_entity;
+    $variables['threaded'] = $variables['elements']['#comment_threaded'];
+    $account = $comment->getOwner();
+    $username = [
+        '#theme' => 'username',
+        '#account' => $account,
+    ];
+    $variables['author'] = \Drupal::service('renderer')->render($username);
+    $variables['author_id'] = $comment->getOwnerId();
+    $variables['new_indicator_timestamp'] = $comment->getChangedTime();
+    $variables['created'] = format_date($comment->getCreatedTime(),'comment_format');
+
+    // Avoid calling format_date() twice on the same timestamp.
+    if ($comment->getChangedTime() == $comment->getCreatedTime()) {
+        $variables['changed'] = $variables['created'];
+    }
+    else {
+        $variables['changed'] = format_date($comment->getChangedTime());
+    }
+    if (theme_get_setting('features.comment_user_picture')) {
+
+        // To change user picture settings (for instance, image style), edit the
+        // 'compact' view mode on the User entity.
+        $variables['user_picture'] = user_view($account, 'compact');
+    }
+    else {
+        $variables['user_picture'] = [
+
+        ];
+    }
+    if (isset($comment->in_preview)) {
+        $variables['title'] = \Drupal::l($comment->getSubject(), new Url('<front>'));
+        $variables['permalink'] = \Drupal::l(t('Permalink'), new Url('<front>'));
+    }
+    else {
+        $uri = $comment->permalink();
+        $attributes = $uri->getOption('attributes') ?: [
+
+        ];
+        $attributes += [
+            'class' => [
+                'permalink',
+            ],
+            'rel' => 'bookmark',
+        ];
+        $uri->setOption('attributes', $attributes);
+        $variables['title'] = \Drupal::l($comment->getSubject(), $uri);
+        $variables['permalink'] = \Drupal::l(t('Permalink'), $comment->permalink());
+    }
+
+    $variables['submitted'] = t('@username @datetime', [
+        '@username' => $variables['author'],
+        '@datetime' => $variables['created'],
+    ]);
+
+    if ($comment->hasParentComment()) {
+
+        // Fetch and store the parent comment information for use in templates.
+        $comment_parent = $comment->getParentComment();
+        $account_parent = $comment_parent->getOwner();
+        $variables['parent_comment'] = $comment_parent;
+        $username = [
+            '#theme' => 'username',
+            '#account' => $account_parent,
+        ];
+        $variables['parent_author'] = \Drupal::service('renderer')->render($username);
+        $variables['parent_created'] = format_date($comment_parent->getCreatedTime());
+
+        // Avoid calling format_date() twice on the same timestamp.
+        if ($comment_parent->getChangedTime() == $comment_parent->getCreatedTime()) {
+            $variables['parent_changed'] = $variables['parent_created'];
+        }
+        else {
+            $variables['parent_changed'] = format_date($comment_parent->getChangedTime());
+        }
+        $permalink_uri_parent = $comment_parent->permalink();
+        $attributes = $permalink_uri_parent->getOption('attributes') ?: [
+
+        ];
+        $attributes += [
+            'class' => [
+                'permalink',
+            ],
+            'rel' => 'bookmark',
+        ];
+        $permalink_uri_parent->setOption('attributes', $attributes);
+        $variables['parent_title'] = \Drupal::l($comment_parent->getSubject(), $permalink_uri_parent);
+        $variables['parent_permalink'] = \Drupal::l(t('Parent permalink'), $permalink_uri_parent);
+        $variables['parent'] = t('In reply to @parent_title by @parent_username', [
+            '@parent_username' => $variables['parent_author'],
+            '@parent_title' => $variables['parent_title'],
+        ]);
+    }
+    else {
+        $variables['parent_comment'] = '';
+        $variables['parent_author'] = '';
+        $variables['parent_created'] = '';
+        $variables['parent_changed'] = '';
+        $variables['parent_title'] = '';
+        $variables['parent_permalink'] = '';
+        $variables['parent'] = '';
+    }
+
+
+}

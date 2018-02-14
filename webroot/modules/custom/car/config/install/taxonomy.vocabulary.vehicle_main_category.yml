@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vehicle main category'
+vid: vehicle_main_category
+description: 'Vehicle category'
+hierarchy: 0
+weight: 0

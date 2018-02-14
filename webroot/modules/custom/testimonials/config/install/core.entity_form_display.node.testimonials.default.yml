@@ -1,0 +1,110 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testimonials.field_testimonial_
+    - field.field.node.testimonials.field_testimonial_comment
+    - field.field.node.testimonials.field_testimonial_image
+    - field.field.node.testimonials.field_testimonial_user_location
+    - field.field.node.testimonials.field_testimonial_user_occupatio
+    - image.style.thumbnail
+    - node.type.testimonials
+  module:
+    - image
+    - path
+id: node.testimonials.default
+targetEntityType: node
+bundle: testimonials
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_testimonial_:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_comment:
+    weight: 123
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_testimonial_image:
+    weight: 121
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testimonial_user_location:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_user_occupatio:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.car.field_additional_equipment
+    - field.field.node.car.field_body_ty
+    - field.field.node.car.field_buy_se
+    - field.field.node.car.field_car_
+    - field.field.node.car.field_car_assembly
+    - field.field.node.car.field_car_brand
+    - field.field.node.car.field_car_image
+    - field.field.node.car.field_car_model_year
+    - field.field.node.car.field_car_name
+    - field.field.node.car.field_car_type
+    - field.field.node.car.field_city
+    - field.field.node.car.field_country
+    - field.field.node.car.field_engine_capacity
+    - field.field.node.car.field_fuel_type
+    - field.field.node.car.field_location
+    - field.field.node.car.field_millage
+    - field.field.node.car.field_price
+    - field.field.node.car.field_registered_city
+    - field.field.node.car.field_seller_comment
+    - field.field.node.car.field_state
+    - field.field.node.car.field_transmission
+    - field.field.node.car.field_vehicle_category
+    - node.type.car
+  module:
+    - image
+    - user
+id: node.car.teaser
+targetEntityType: node
+bundle: car
+mode: teaser
+content:
+  field_car_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_car_name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_price:
+    type: number_integer
+    weight: 2
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_additional_equipment: true
+  field_body_ty: true
+  field_buy_se: true
+  field_car_: true
+  field_car_assembly: true
+  field_car_brand: true
+  field_car_model_year: true
+  field_car_type: true
+  field_city: true
+  field_country: true
+  field_engine_capacity: true
+  field_fuel_type: true
+  field_location: true
+  field_millage: true
+  field_registered_city: true
+  field_seller_comment: true
+  field_state: true
+  field_transmission: true
+  field_vehicle_category: true

@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.welcome_to_auto_cars_homepage
+    - field.field.block_content.welcome_to_auto_cars_homepage.body
+    - field.field.block_content.welcome_to_auto_cars_homepage.field_image
+    - field.field.block_content.welcome_to_auto_cars_homepage.field_some_list_of_text
+    - field.field.block_content.welcome_to_auto_cars_homepage.field_some_text
+    - field.field.block_content.welcome_to_auto_cars_homepage.field_subtitle_h4
+    - field.field.block_content.welcome_to_auto_cars_homepage.field_title_h2
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.welcome_to_auto_cars_homepage.default
+targetEntityType: block_content
+bundle: welcome_to_auto_cars_homepage
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_some_list_of_text:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_some_text:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_subtitle_h4:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_h2:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

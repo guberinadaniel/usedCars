@@ -1,0 +1,17 @@
+{% for entry in content %}
+        <h2>About This Car</h2>
+    <div class="block-content">
+        <div class="this-car"><div class="this-car-left">Registered City</div> <div class="this-car-right">{{ entry.city }}</div></div>
+        <div class="this-car"><div class="this-car-left">Color</div> <div class="this-car-right">{{ entry.color }}</div></div>
+        <div class="this-car"><div class="this-car-left">Assembly</div> <div class="this-car-right">{{ entry.assembly }}</div></div>
+<div class="this-car"><div class="this-car-left">Engine Capacity</div> <div class="this-car-right">{{ entry.engine_capacity }}<span class="ccm"> cc</span></div></div>
+<div class="this-car"><div class="this-car-left">Body Type</div> <div class="this-car-right">{{ entry.body_type }}</div></div>
+    <div class="this-car"><div class="this-car-left">Last Updated</div> <div class="this-car-right">{{ entry.changed|date('M d, Y') }}</div></div>
+    <div class="this-car"><div class="this-car-left">Model</div> <div class="this-car-right">{{ entry.model_year }}</div></div>
+    <div class="this-car"><div class="this-car-left">Ad Ref #</div> <div class="this-car-right">{{ entry.ad_id }}</div></div>
+    <div class="this-car"><div class="this-car-left">Milage</div> <div class="this-car-right">{{ entry.millage }}<span class="km"> km</span></div></div>
+    <div class="this-car"><div class="this-car-left">Fuel</div> <div class="this-car-right">{{ entry.fuel_type }}</div></div>
+    <div class="this-car"><div class="this-car-left">Transmission</div> <div class="this-car-right">{{ entry.transmission }}</div></div>
+    </div>
+{% endfor %}
+

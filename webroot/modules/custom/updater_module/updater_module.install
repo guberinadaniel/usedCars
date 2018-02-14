@@ -1,0 +1,57 @@
+<?php
+use \Drupal\field\Entity\FieldStorageConfig;
+use \Drupal\field\Entity\FieldConfig;
+/**
+ * update testimonials and install car city block
+ */
+function updater_module_update_8427() {
+    \Drupal::service('module_installer')->install(['featured_cars_block']);
+}
+
+function updater_module_update_84210() {
+    \Drupal::service('module_installer')->install(['popular_cars_block']);
+}
+
+function updater_module_update_8429() {
+    \Drupal::service('module_installer')->install(['easy_breadcrumb']);
+}
+
+function updater_module_update_84211() {
+    \Drupal::service('module_installer')->install(['testimonials_block']);
+}
+
+function updater_module_update_84212() {
+    \Drupal::service('module_installer')->install(['testimonials_block']);
+}
+
+function updater_module_update_84213() {
+    \Drupal::service('module_installer')->install(['cars_city_block']);
+}
+
+function updater_module_update_84214() {
+    \Drupal::service('module_installer')->install(['blog_side']);
+}
+
+function updater_module_update_84215() {
+    \Drupal::service('module_installer')->install(['blog_archive']);
+}
+
+function updater_module_update_84216() {
+    \Drupal::service('module_installer')->install(['blog_imgs']);
+}
+
+function updater_module_update_84217() {
+    \Drupal::service('module_installer')->install(['article2']);
+}
+
+function updater_module_update_84218() {
+    \Drupal::service('module_installer')->install(['contact_us']);
+}
+
+function updater_module_update_84219() {
+    \Drupal::service('module_installer')->install(['article3']);
+}
+
+function updater_module_update_84220() {
+    \Drupal::service('module_installer')->install(['car_search']);
+}

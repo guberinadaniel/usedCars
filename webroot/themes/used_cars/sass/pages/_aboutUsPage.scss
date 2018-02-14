@@ -1,0 +1,91 @@
+@media (max-width:$screen-md) {
+  #block-ourperfectplatform {
+    max-width: 1170px;
+    margin: 0 auto;
+    .field--name-field-perfect-platform-para {
+      padding: 0 15px;
+      .paragraph--type--platform-block {
+        padding: 50px 0;
+        overflow: hidden;
+        .about-us-text-content {
+          display: block !important;
+          width: 100% !important;
+          vertical-align: top;
+          padding-right: 0 !important;
+          color: #333;
+          .field--name-field-title-para {
+            font-size: 36px;
+            color: #5dc302;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: "Raleway";
+            font-style: normal;
+          }
+          .field--name-field-platform-text {
+            line-height: 24px;
+            font-size: 16px;
+          }
+        }
+        .about-us-image {
+          padding-left: 0 !important;
+          padding-top: 15px !important;
+          vertical-align: top;
+          display: block !important;
+          width: 100% !important;
+          .field--name-field-platform-image {
+          }
+        }
+      }
+    }
+  }
+}
+
+#block-ourperfectplatform {
+  max-width: 1170px;
+  margin: 0 auto;
+  .field--name-field-perfect-platform-para {
+    padding: 0 15px;
+    .paragraph--type--platform-block {
+      padding: 50px 0;
+      overflow: hidden;
+      .about-us-text-content {
+        display: inline-block;
+        width: 58.33333333%;
+        vertical-align: top;
+        padding-right: 15px;
+        color: #333;
+        .field--name-field-title-para {
+          font-size: 36px;
+          color: #5dc302;
+          font-weight: 700;
+          margin-bottom: 15px;
+          font-family: "Raleway";
+          font-style: normal;
+        }
+        .field--name-field-platform-text {
+          line-height: 24px;
+          font-size: 16px;
+        }
+      }
+      .about-us-image {
+        padding-left: 15px;
+        vertical-align: top;
+        display: inline-block;
+        width: 40.66666667%;
+        .field--name-field-platform-image {
+        }
+      }
+    }
+  }
+}
+
+body.about-us{
+  main {
+    padding: 0;
+    max-width: none;
+  }
+  .layout-content {
+    width: 100%;
+    display: inline-block;
+  }
+}

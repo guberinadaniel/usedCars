@@ -1,0 +1,159 @@
+body.path-user{
+  main {
+    max-width: none;
+  }
+  .user-login-page-wraper {
+    margin: 50px auto;
+    max-width: 550px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 25px 30px;
+    #block-used-cars-local-tasks {
+      display: none;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      nav ul li, .is-active {
+        display: block;
+        margin-bottom: 15px;
+        a{
+          width: 100%;
+          background: #5dc302;
+          color: #fff;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+
+        }
+      }
+    }
+    #user-login-form {
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      label { display: none; }
+      .js-form-item-name {
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 40px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      .js-form-item-pass {
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 40px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-actions {
+        margin-bottom: 30px;
+        input {
+          width: 100%;
+          background: #5dc302;
+          color: #fff;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+          border: 0;
+          &:hover {
+            background: #48da26;
+          }
+        }
+      }
+      .usernew {
+        color: #666;
+        font-size: 18px;
+        &:before {
+          content: "\f007";
+          font-family: FontAwesome;
+          padding-right: 8px;
+        }
+      }
+      .register-here {
+        color: #5dc302;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover {
+          color: #23527c;
+          text-decoration: underline;
+        }
+      }
+      .user_hr {
+        margin: 15px 0;
+        border-top: 1px solid #eee;
+        border-bottom: 0;
+      }
+      .user_msg {
+        font-size: 20px;
+        color: #555;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-family: "Raleway";
+        font-style: normal;
+      }
+      .user_fb {
+        display: inline-block;
+        text-decoration: none;
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        font-size: 18px;
+        margin: 0 5px;
+        line-height: 36px;
+        background: #3b5998;
+        &:before {
+          content: "\f09a";
+          font-family: FontAwesome;
+
+        }
+      }
+      .user_goo {
+        display: inline-block;
+        text-decoration: none;
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        font-size: 18px;
+        margin: 0 5px;
+        line-height: 36px;
+        background: #dd4b39;
+        &:before {
+          content: "\f0d5";
+          font-family: FontAwesome;
+
+
+        }
+      }
+      .user_tw {
+        display: inline-block;
+        text-decoration: none;
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        font-size: 18px;
+        margin: 0 5px;
+        line-height: 36px;
+        background: #00aced;
+        &:before {
+          content: "\f099";
+          font-family: FontAwesome;
+
+        }
+      }
+    }
+  }
+}

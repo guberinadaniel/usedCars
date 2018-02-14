@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains blog_list.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function blog_list_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the blog_list module.
+    case 'help.page.blog_list':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function blog_list_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'blog_list' => array(
+            'template'  => 'blog-list',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+    ];
+}

@@ -1,0 +1,920 @@
+@media (max-width:$screen-md) {
+  .add-car-page {
+    .layout-container {
+      margin: 0 ;
+      .layout-content{
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+    #node-car-form {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 25px 30px;
+      .form-item {
+        margin-top: 0;
+      }
+
+      //   Data input fields
+
+      #edit-title-wrapper {
+        label { display: none }
+        input {
+          width: 100%;
+          padding: 6px 0 6px 6px;
+        }
+      }
+      .form-3col-wraper1 {
+        label { display: none }
+        width: 100%;
+        #edit-field-car-type-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding-right: 0 !important;
+          .js-form-item-field-car-type {
+            select {
+              width: 100%;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              padding: 13px 12px;
+              line-height: 45px;
+              background-color: #fff;
+              color: #555;
+            }
+          }
+        }
+        #edit-field-vehicle-category-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          .js-form-item-field-vehicle-category {
+
+            select {
+              width: 100%;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              padding: 13px 12px;
+              line-height: 45px;
+              background-color: #fff;
+              color: #555;
+            }
+          }
+        }
+        #edit-field-car-brand-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          .js-form-item-field-car-brand {
+
+            select {
+              width: 100%;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              padding: 13px 12px;
+              line-height: 45px;
+              background-color: #fff;
+              color: #555;
+            }
+          }
+        }
+      }
+      .form-3col-wraper2 {
+        label { display: none }
+        #edit-field-car-model-year-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-car-assembly-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-body-ty-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+      .form-3col-wraper3 {
+        label { display: none }
+        #edit-field-registered-city-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-transmission-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-car-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+      .form-3col-wraper4 {
+        label { display: none }
+        #edit-field-millage-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+          span { display: none }
+        }
+        #edit-field-engine-capacity-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+          span { display: none }
+        }
+        #edit-field-fue-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+
+      //  Additional equipment checkboxes
+
+      #edit-field-additional-equipment-wrapper {
+        legend {
+          display: none;
+        }
+        .fieldset-wrapper {
+          .form-checkboxes {
+            width: 100%;
+            .checkbox-3col-wraper1 {
+              display: block !important;
+              width: 100% !important;
+              padding: 0 !important;
+              .form-item {
+                margin-top: 10px;
+                vertical-align: top;
+              }
+            }
+            .checkbox-3col-wraper2 {
+              display: block !important;
+              width: 100% !important;
+              padding: 0 !important;
+              .form-item {
+                margin-top: 10px;
+                vertical-align: top;
+              }
+            }
+            .checkbox-3col-wraper3 {
+              display: block !important;
+              width: 100% !important;
+              padding: 0 !important;
+              .form-item {
+                margin-top: 10px;
+                vertical-align: top;
+              }
+            }
+          }
+        }
+      }
+
+      //  Upload file
+
+      #edit-field-car-image-wrapper {
+        #edit-field-car-image-ajax-wrapper {
+          .js-form-required {
+            font-size: 30px;
+            color: #777;
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 10px;
+            font-weight: 600;
+            &:after {
+              display: none;
+            }
+            &::before {
+              font-size: 50px;
+              color: #999;
+              display: block;
+              margin-bottom: 15px;
+              content:'\f093';
+              font-family: FontAwesome;
+              font: normal normal normal 50px/1 FontAwesome;   //  <---------TODO/ REMEMBER THIS
+
+            }
+          }
+          #edit-field-car-image-0-upload--description {
+            display: none;
+          }
+          #edit-field-car-image {
+            border: 3px dashed #ddd;
+            padding: 50px 30px;
+            text-align: center;
+            summary { display: none; }
+            .details-wrapper {
+
+              .image-widget-data {
+                position: relative;
+                margin: 20px auto;
+                input {
+                  font-size: 5px;
+                  color: #fff;
+                  font-weight: bold;
+                  padding: 0;
+                  margin: 0;
+                  overflow: hidden;
+                  background: #555;
+                  opacity: 0;
+                  min-height: 65px;
+                  min-width: 100%;
+                  z-index: 999;
+                  &:hover {
+                    cursor: pointer;
+                  }
+                }
+                &:before {
+                  position: absolute;
+                  content: 'Click here to Upload';
+                  font-family: "Open Sans";
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 18px;
+                  background: #555;
+                  color: #fff;
+                  width: 100%;
+                  cursor: pointer;
+                  border-radius: 0;
+                  padding: 8px;
+                  left: 0;
+                  top: 0;
+                  &:hover {
+                    cursor: pointer;
+                    background: #333;
+                  }
+                }
+              }
+              .fix {
+                &:hover {
+                  background-color: red;
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+      //   Data input fields
+
+      .input-wraper-form1 {
+        label { display: none; }
+        span { display: none; }
+        #edit-field-price-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-location-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+
+      }
+      .input-wraper-form2 {
+        label { display: none; }
+        #edit-field-city-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-state-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+        #edit-field-country-wrapper {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 !important;
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding-left: 15px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+      #edit-field-seller-comment-wrapper {
+        label { display: none; }
+        .form-textarea-wrapper {
+          margin-bottom: 25px;
+          border-radius: 4px;
+          border-color: #ddd;
+          textarea {
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px 13px;
+          }
+        }
+      }
+
+      //    Save Button
+      #edit-actions {
+        margin: 0;
+        #edit-submit {
+          width: 100%;
+          background: #5dc302;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        #edit-preview { display: none; }
+      }
+    }
+  }
+}
+@media (max-width:$screen-xs) {
+  .image-widget-data {
+    width: 100% !important;
+  }
+}
+.add-car-page {
+  .layout-container {
+    margin: 0 ;
+    .layout-content{
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+  #block-used-cars-content{
+    padding: 50px 0;
+  }
+  #node-car-form {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 25px 30px;
+    .form-item {
+      margin-top: 0;
+    }
+
+    //   Data input fields
+
+    #edit-title-wrapper {
+      label { display: none }
+      input {
+        width: 100%;
+        padding: 6px 0 6px 6px;
+      }
+    }
+    .form-3col-wraper1 {
+      label { display: none }
+      width: 100%;
+      #edit-field-car-type-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-right: 15px;
+        .js-form-item-field-car-type {
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+      #edit-field-vehicle-category-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding: 0 15px;
+        .js-form-item-field-vehicle-category {
+
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+      #edit-field-car-brand-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-left: 15px;
+        .js-form-item-field-car-brand {
+
+          select {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 13px 12px;
+            line-height: 45px;
+            background-color: #fff;
+            color: #555;
+          }
+        }
+      }
+    }
+    .form-3col-wraper2 {
+      label { display: none }
+      #edit-field-car-model-year-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-right: 15px;
+        select {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 13px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-car-assembly-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding: 0 15px;
+        select {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 13px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-body-ty-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-left: 15px;
+        select {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 13px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+    }
+    .form-3col-wraper3 {
+      label { display: none }
+      #edit-field-registered-city-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-right: 15px;
+        select {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 13px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-transmission-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding: 0 15px;
+        select {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 13px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-car-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-left: 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+    }
+    .form-3col-wraper4 {
+      label { display: none }
+      #edit-field-millage-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-right: 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+        span { display: none }
+      }
+      #edit-field-engine-capacity-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding: 0 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+        span { display: none }
+      }
+      #edit-field-fue-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-left: 15px;
+        select {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 13px 12px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+    }
+
+    //  Additional equipment checkboxes
+
+    #edit-field-additional-equipment-wrapper {
+      legend {
+        display: none;
+      }
+      .fieldset-wrapper {
+        .form-checkboxes {
+          width: 100%;
+          .checkbox-3col-wraper1 {
+            display: inline-block;
+            width: 33%;
+            padding-right: 15px;
+            .form-item {
+              margin-top: 10px;
+              vertical-align: top;
+            }
+          }
+          .checkbox-3col-wraper2 {
+            display: inline-block;
+            width: 33%;
+            padding: 0 15px;
+            .form-item {
+              margin-top: 10px;
+              vertical-align: top;
+            }
+          }
+          .checkbox-3col-wraper3 {
+            display: inline-block;
+            width: 33%;
+            padding-left: 15px;
+            .form-item {
+              margin-top: 10px;
+              vertical-align: top;
+            }
+          }
+        }
+      }
+    }
+
+    //  Upload file
+
+    #edit-field-car-image-wrapper {
+      #edit-field-car-image-ajax-wrapper {
+        .js-form-required {
+          font-size: 30px;
+          color: #777;
+          font-family: 'Raleway', sans-serif;
+          margin-bottom: 10px;
+          font-weight: 600;
+          &:after {
+            display: none;
+          }
+          &::before {
+            font-size: 50px;
+            color: #999;
+            display: block;
+            margin-bottom: 15px;
+            content:'\f093';
+            font-family: FontAwesome;
+            font: normal normal normal 50px/1 FontAwesome;   //  <---------TODO/ REMEMBER THIS
+
+          }
+        }
+        #edit-field-car-image-0-upload--description {
+          display: none;
+        }
+        #edit-field-car-image {
+          border: 3px dashed #ddd;
+          padding: 50px 30px;
+          text-align: center;
+          summary { display: none; }
+          .details-wrapper {
+            .image-widget-data {
+              position: relative;
+              width: 220px;
+              margin: 20px auto;
+              input {
+                font-size: 5px;
+                color: #fff;
+                font-weight: bold;
+                padding: 0px 0px;
+                margin: 0;
+                overflow: hidden;
+                background: #555;
+                opacity: 0;
+                min-height: 65px;
+                min-width: 100%;
+                z-index: 999;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+              &:before{
+                position: absolute;
+                content: 'Click here to Upload';
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                background: #555;
+                color: #fff;
+                width: 100%;
+                cursor: pointer;
+                border-radius: 0;
+                padding: 8px;
+                left: 0;
+                top: 0;
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    //   Data input fields
+
+    .input-wraper-form1 {
+      label { display: none; }
+      span { display: none; }
+      #edit-field-price-wrapper {
+        display: inline-block;
+        width: 50%;
+        padding-right: 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-location-wrapper {
+        display: inline-block;
+        width: 50%;
+        padding-left: 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+
+    }
+    .input-wraper-form2 {
+      label { display: none; }
+      #edit-field-city-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-right: 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-state-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding: 0 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+      #edit-field-country-wrapper {
+        display: inline-block;
+        width: calc(100% / 3);
+        padding-left: 15px;
+        input {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding-left: 15px;
+          line-height: 45px;
+          background-color: #fff;
+          color: #555;
+        }
+      }
+    }
+    #edit-field-seller-comment-wrapper {
+      label { display: none; }
+      .form-textarea-wrapper {
+        margin-bottom: 25px;
+        border-radius: 4px;
+        border-color: #ddd;
+        textarea {
+          height: 200px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 10px 13px;
+        }
+      }
+    }
+
+    //    Save Button
+    #edit-actions {
+      margin: 0;
+      #edit-submit {
+        width: 100%;
+        background: #5dc302;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:hover {
+        #edit-submit {
+          background: #48da26;
+          transition-duration: 0.4s;
+        }
+      }
+      #edit-preview { display: none; }
+    }
+  }
+}

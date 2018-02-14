@@ -1,0 +1,8 @@
+name: 'Download app'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - link
+version: 8.x-1.0

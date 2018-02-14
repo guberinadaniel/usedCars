@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains blog_imgs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function blog_imgs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the blog_imgs module.
+    case 'help.page.blog_imgs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function blog_imgs_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'blog_imgs' => array(
+            'template'  => 'blog-imgs',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+    ];
+}

@@ -1,0 +1,115 @@
+// ========================================
+//
+// @file _typography.scss
+// Base level typography, fonts, colors, sizes
+//
+// ========================================
+
+
+@font-face {
+  font-family: 'FontAwesome';
+  //src: url('http://dev-used-cars.pantheonsite.io/themes/used_cars/assets/fonts/fontawesome-webfont.ttf') format('truetype')
+  src: url('../../assets/fonts/fontawesome-webfont.ttf')
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("https://fonts.gstatic.com/s/opensans/v15/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("https://fonts.gstatic.com/s/opensans/v15/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v12/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+p {
+
+	&:last-child {
+	  margin-bottom: 0;
+	}
+}
+
+a {
+  transition: 0.4s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  a {
+    color: inherit;
+
+    &:hover {
+    }
+  }
+}
+
+h1 {
+  @include rem('font-size', 36px);
+}
+
+h2 {
+  @include rem('font-size', 30px);
+}
+
+h3 {
+  @include rem('font-size', 24px);
+}
+
+h4 {
+  @include rem('font-size', 20px);
+}
+
+h5 {
+  @include rem('font-size', 18px);
+}
+
+h6 {
+  @include rem('font-size', 16px);
+}
+
+ul {
+
+  li {
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+
+  li {
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

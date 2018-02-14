@@ -1,0 +1,8 @@
+name: Article3 Block
+description: A simple module to display contact us form.
+core: 8.x
+package: Custom
+dependencies:
+- node
+- block
+type: module

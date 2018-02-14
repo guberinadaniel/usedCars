@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.download_our_app
+    - field.field.block_content.download_our_app.field_app_link1
+    - field.field.block_content.download_our_app.field_app_link2
+    - field.field.block_content.download_our_app.field_app_link3
+    - field.field.block_content.download_our_app.field_app_subtitle
+    - field.field.block_content.download_our_app.field_app_text
+    - field.field.block_content.download_our_app.field_app_title
+  module:
+    - link
+id: block_content.download_our_app.default
+targetEntityType: block_content
+bundle: download_our_app
+mode: default
+content:
+  field_app_link1:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_app_link2:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_app_link3:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_app_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_app_text:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_app_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

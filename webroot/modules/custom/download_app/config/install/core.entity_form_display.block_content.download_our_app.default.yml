@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.download_our_app
+    - field.field.block_content.download_our_app.field_app_link1
+    - field.field.block_content.download_our_app.field_app_link2
+    - field.field.block_content.download_our_app.field_app_link3
+    - field.field.block_content.download_our_app.field_app_subtitle
+    - field.field.block_content.download_our_app.field_app_text
+    - field.field.block_content.download_our_app.field_app_title
+  module:
+    - link
+id: block_content.download_our_app.default
+targetEntityType: block_content
+bundle: download_our_app
+mode: default
+content:
+  field_app_link1:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_app_link2:
+    weight: 30
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_app_link3:
+    weight: 31
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_app_subtitle:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_app_text:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_app_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

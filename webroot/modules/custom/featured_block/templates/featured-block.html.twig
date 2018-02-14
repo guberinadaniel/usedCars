@@ -1,0 +1,30 @@
+
+{% for entry in content %}
+    <div class="related-ads">
+        <div class="block-content">
+            <div class="imaze">
+                <img src="{{ entry.image }}"/>
+            </div>
+            <div class="car-price-wraper">
+                <div class="car-info-wraper">
+                    <h4>{{ entry.title | t }} for Sale</h4>
+                    <div class="year-millage-city">
+                        <span class="model-year">{{ entry.model_year }}</span>
+                        <span class="millage">{{ entry.millage }}</span><span class="km"> km</span>
+                        <span class="city">{{ entry.city }}</span>
+                    </div>
+                    <div class="fuel-cc-transm">
+                        <span class="fuel-type">{{ entry.fuel_type }}</span>
+                        <span class="engine">{{ entry.engine_capacity }}</span><span class="ccm"> cc</span>
+                        <span class="transmission">{{ entry.transmission }}</span>
+                    </div>
+                    <span class="updated">Last Updated: {{ entry.changed }}</span>
+                </div>
+                <div class="price-details">
+                    <h3>${{ entry.price|number_format(2, '.', ',') }}</h3>
+                    <a href="{{ entry.nid }}">View details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

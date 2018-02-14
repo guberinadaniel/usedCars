@@ -1,0 +1,21 @@
+{{ title_prefix }}
+  {% if not page %}
+      <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+
+<div class="used-cars-blog">
+    <div class="used-cars-blog-wraper1">
+        <div class="blog-image">{{ content.field_blog_image }}</div>
+        <h2>{{ label }}</h2>
+        <p>By : {{ author_name }}</p>
+        <p class="blog-category">Category : {{ content.field_blog_category }}</p>
+        <p class="blog-text">{{ content.field_blog_text }}</p>
+    </div>
+<h3>Comments</h3>
+{{ content.field_comment }}
+
+</div>

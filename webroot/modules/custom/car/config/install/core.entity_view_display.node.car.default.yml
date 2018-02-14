@@ -1,0 +1,216 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.car.field_additional_equipment
+    - field.field.node.car.field_body_ty
+    - field.field.node.car.field_buy_se
+    - field.field.node.car.field_car_
+    - field.field.node.car.field_car_assembly
+    - field.field.node.car.field_car_brand
+    - field.field.node.car.field_car_image
+    - field.field.node.car.field_car_model_year
+    - field.field.node.car.field_car_name
+    - field.field.node.car.field_car_type
+    - field.field.node.car.field_city
+    - field.field.node.car.field_country
+    - field.field.node.car.field_engine_capacity
+    - field.field.node.car.field_fuel_type
+    - field.field.node.car.field_location
+    - field.field.node.car.field_millage
+    - field.field.node.car.field_price
+    - field.field.node.car.field_registered_city
+    - field.field.node.car.field_seller_comment
+    - field.field.node.car.field_state
+    - field.field.node.car.field_transmission
+    - field.field.node.car.field_vehicle_category
+    - node.type.car
+  module:
+    - image
+    - user
+id: node.car.default
+targetEntityType: node
+bundle: car
+mode: default
+content:
+  field_additional_equipment:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_body_ty:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_buy_se:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_car_:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_car_assembly:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_car_brand:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_car_image:
+    weight: 15
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_car_model_year:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_car_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_car_type:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_city:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_country:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_engine_capacity:
+    weight: 12
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_fuel_type:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_location:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_millage:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_price:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_registered_city:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_seller_comment:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_state:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_transmission:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_vehicle_category:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  links: true

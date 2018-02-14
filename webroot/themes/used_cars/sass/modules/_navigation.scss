@@ -1,0 +1,175 @@
+@media (max-width:$screen-md) {
+  .region-navigation {
+    .layout-wraper {
+      max-width: 1170px;
+      margin: 0 auto;
+      #block-used-cars-branding {
+        position: relative;
+        display: block !important;
+        width: 100%!important;
+        vertical-align: middle;
+        padding: 15px 15px 32px 15px!important;
+
+        .site-logo{
+          margin: 5px 0 15px 0 !important;
+        }
+        .navbar-header {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          .navbar-toggle {
+            display: block !important;
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background: #ccc;
+            .icon-bar:first-of-type {
+              margin-top: -1px !important;
+            }
+            .icon-bar {
+              display: block;
+              width: 22px;
+              height: 2px;
+              border-radius: 1px;
+              background: #fff;
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+      #block-used-cars-main-menu {
+        display: none !important; //TODO navigation display:NONE
+      }
+      #block-used-cars-main-menu.reactive {
+        display: block !important;
+        width: 100% !important;
+        font-size: inherit;
+        font-weight: 600;
+        ul.menu {
+          display: block!important;
+          margin: 0 auto;
+          text-align: left;
+          padding: 3px 15px!important;
+          border-top: 1px solid rgba(0, 0, 0, 0.11) !important;
+          li.menu-item {
+            width: 100% !important;
+            display: block !important;
+            //padding: 11px 20px !important;
+            margin: 0 auto !important;
+            a {
+              font-size: 16px;
+              color: #777;
+              text-decoration: none;
+              width: 100% !important;
+              padding: 10px 20px !important;
+            }
+            .is-active {
+              background: #5dc302 !important;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.2s;
+              color: #fff;
+              text-decoration: none;
+            }
+            &:hover:not(.menu-item--active-trail,.menu-item .is-active) {
+              background: #5dc302 !important;
+              border-radius: 5px !important;
+              //padding: 13px 20px;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.2s;
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.region-navigation {
+  .layout-wraper {
+    max-width: 1170px;
+    margin: 5px auto;
+    #block-used-cars-branding {
+      display: inline-block;
+      width: 25%;
+      vertical-align: middle;
+      padding: 0 15px 6px 15px;
+      .navbar-toggle {
+        display: none;
+      }
+    }
+    #block-used-cars-main-menu {
+      display: inline-block;
+      width: 74%;
+      font-size: inherit;
+      font-weight: 600;
+      ul.menu {
+        margin: 0 auto;
+        text-align: right;
+        padding: 0 15px;
+        li.menu-item {
+          display: inline-block;
+          //padding: 13px 20px;
+          margin: 10px auto;
+          a {
+            padding: 10px 20px;
+            display: block;
+            color: #777;
+            text-decoration: none;
+          }
+          &.menu-item--active-trail {
+            background-color: #5dc302;
+            //padding: 13px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            a {color: #fff;}
+          }
+          &:hover {
+            background-color: #5dc302;
+            //padding: 13px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.user-logged-in {
+  .region-navigation {
+    .menu-item {
+      &:last-child {
+        background: #2f3b3e !important;
+        border-radius: 5px !important;
+        a {
+          color: #fff !important;
+        }
+        &:hover {
+          background-color: #5dc302 !important;
+          //padding: 13px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.2s;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+name: About Block
+type: module
+description: About Block
+core: 8.x
+package: Custom

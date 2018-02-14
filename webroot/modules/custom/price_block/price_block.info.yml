@@ -1,0 +1,5 @@
+name: Price Block
+type: module
+description: Price Block
+core: 8.x
+package: Custom

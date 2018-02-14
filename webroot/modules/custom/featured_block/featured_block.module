@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains featured_block.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function featured_block_help ( $route_name, RouteMatchInterface $route_match ) {
+	switch ( $route_name ) {
+		// Main module help for the featured_block module.
+		case 'help.page.featured_block':
+			$output = '';
+			$output .= '<h3>' . t( 'About' ) . '</h3>';
+			$output .= '<p>' . t( 'Featured Block' ) . '</p>';
+
+			return $output;
+
+		default:
+	}
+}
+
+/**
+ * Implements hook_theme().
+ */
+function featured_block_theme ( $existing, $type, $theme, $path ) {
+	return [
+		'featured_block' => array(
+			'template'  => 'featured-block',
+			'variables' => [
+				'content'  => [],
+			],
+		),
+	];
+}

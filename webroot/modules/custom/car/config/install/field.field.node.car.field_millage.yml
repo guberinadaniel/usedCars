@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_millage
+    - node.type.car
+id: node.car.field_millage
+field_name: field_millage
+entity_type: node
+bundle: car
+label: Millage
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 500000
+  prefix: ''
+  suffix: milles
+field_type: integer

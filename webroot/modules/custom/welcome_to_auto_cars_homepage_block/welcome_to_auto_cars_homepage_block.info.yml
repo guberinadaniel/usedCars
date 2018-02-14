@@ -1,0 +1,10 @@
+name: 'Welcome to Auto Cars Homepage Block'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - file
+  - image
+  - text
+version: ' 8.x-1.2'

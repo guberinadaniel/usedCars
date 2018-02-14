@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains hero_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hero_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the hero_search module.
+    case 'help.page.hero_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hero_search_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'hero_search' => array(
+            'template'  => 'hero-search',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+    ];
+}

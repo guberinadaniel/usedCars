@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.welcome_to_auto_cars_homepage
+    - field.storage.block_content.field_some_list_of_text
+id: block_content.welcome_to_auto_cars_homepage.field_some_list_of_text
+field_name: field_some_list_of_text
+entity_type: block_content
+bundle: welcome_to_auto_cars_homepage
+label: 'Some list of text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

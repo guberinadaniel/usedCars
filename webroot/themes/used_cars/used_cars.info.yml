@@ -1,0 +1,27 @@
+# Theme information
+name: Used cars
+type: theme
+base theme: classy
+description: Used cars project.
+core: 8.x
+version: 1.x
+
+# Include libraries
+libraries:
+  - used_cars/global-css
+  - used_cars/global-js
+
+# Regions
+regions:
+  header: 'Header'
+  navigation: 'Navigation'
+  search_filter: 'Search Filter'
+  breadcrumb: 'Breadcrumb'
+  sidebar_first: 'Sidebar first'
+  content: 'Content'
+  sidebar_second: 'Sidebar second'
+  featured: 'Featured'
+  newsletter: 'Newsletter'
+  footer_menu: 'Footer menu'
+  footer_links: 'Footer links'
+  footer_copyright: 'Footer copyright'
